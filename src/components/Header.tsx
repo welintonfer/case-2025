@@ -38,7 +38,7 @@ export default function Header({
           <div className="pt-12 sm:pt-4 flex justify-between items-center">
           <div className="flex flex-col">
               <Link href="/" className="hover:scale-105 transition-transform duration-200">
-                <span className="isolate-color text-xl font-bold">Wellington Alexander</span> <br />
+                <span className="isolate-color text-xl font-bold">Welinton Fernandes</span> <br />
                 <span className="text-sm isolate-color">Portimão, Portugal</span>
               </Link>
           </div>

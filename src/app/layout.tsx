@@ -1,41 +1,58 @@
-import "./globals.css";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+import ClientSideScript from "@/components/ClientSideScript";
 import ClientAnimatedCursor from "@/components/ClientAnimatedCursor";
-import ClientSideAnalytics from "@/components/ClientSideAnalytics";
+import { calculateExperienceYears, getExperienceDescription } from "@/lib/utils";
 
-// Metadados globais otimizados para SEO
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
+
+const experienceYears = calculateExperienceYears();
+const experienceDescription = getExperienceDescription();
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.creative-ton.com'),
-  title: {
-    default: "Wellington Alexander - UX/UI Designer & Digital Experience Expert",
-    template: "%s | Wellington Alexander - UX/UI Designer"
+  title: "Welinton Fernandes - Senior UX/UI Designer & Frontend Developer",
+  description: `Welinton Fernandes is a Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
+  keywords: "UX Designer, UI Designer, Frontend Developer, Web Design, User Experience, User Interface, React, Next.js, TypeScript, Responsive Design, Dublin Ireland",
+  authors: [{ name: "Welinton Fernandes" }],
+  creator: "Welinton Fernandes",
+  publisher: "Welinton Fernandes",
+  metadataBase: new URL('https://welintonfer.com'),
+  alternates: {
+    canonical: '/',
   },
-  description: "Wellington Alexander, a UX/UI Designer with over 14 years of experience in Portugal. Specializing in user-centered design, UX research, digital strategy, and front-end development. Creating impactful digital experiences for leading brands.",
-  keywords: [
-    "Wellington Alexander", 
-    "UX/UI Designer Portugal", 
-    "Digital Experience Designer",
-    "User Research Expert", 
-    "Front-end Development", 
-    "User-Centered Design", 
-    "Design Thinking",
-    "Product Design",
-    "Interface Design",
-    "Figma Expert",
-    "Adobe Creative Suite",
-    "Responsive Design",
-    "Accessibility Design",
-    "Design Systems",
-    "Prototyping",
-    "Usability Testing",
-    "Information Architecture",
-    "Interaction Design",
-    "Visual Design",
-    "Brand Design"
-  ],
-  authors: [{ name: "Wellington Alexander" }],
-  creator: "Wellington Alexander",
-  publisher: "Wellington Alexander",
+  openGraph: {
+    title: "Welinton Fernandes - Senior UX/UI Designer & Frontend Developer",
+    description: `Welinton Fernandes is a Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
+    url: 'https://welintonfer.com',
+    siteName: 'Welinton Fernandes Portfolio',
+    images: [
+      {
+        url: '/assets/seo/seo-homepage.png',
+        width: 1200,
+        height: 630,
+        alt: 'Welinton Fernandes - Senior UX/UI Designer & Frontend Developer',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Welinton Fernandes - Senior UX/UI Designer & Frontend Developer",
+    description: `Welinton Fernandes is a Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
+    images: ['/assets/seo/seo-homepage.png'],
+  },
   robots: {
     index: true,
     follow: true,
@@ -47,233 +64,92 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://www.creative-ton.com',
-    siteName: 'Wellington Alexander - UX/UI Designer Portfolio',
-    title: 'Wellington Alexander - UX/UI Designer & Digital Experience Expert',
-    description: 'Explore Wellington Alexander\'s portfolio showcasing 14+ years of UX/UI design expertise. Discover impactful digital experiences, user research projects, and innovative design solutions.',
-    images: [
-      {
-        url: '/assets/seo/seo-homepage.png',
-        width: 1200,
-        height: 630,
-        alt: 'Wellington Alexander - UX/UI Designer Portfolio Preview',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Wellington Alexander - UX/UI Designer & Digital Experience Expert',
-    description: 'Wellington Alexander, a UX/UI Designer with over 14 years of experience in user-centered design, UX research, and digital innovation.',
-    images: ['/assets/seo/seo-homepage.png'],
-  },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-  },
-  alternates: {
-    canonical: 'https://www.creative-ton.com',
-  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Welinton Fernandes',
+    jobTitle: 'Senior UX/UI Designer & Frontend Developer',
+    description: `Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
+    url: 'https://welintonfer.com',
+    sameAs: [
+      'https://www.linkedin.com/in/welintonfer',
+      'https://github.com/welintonfer',
+      'https://dribbble.com/welintonfer',
+      'https://behance.net/welintonfer'
+    ],
+    image: 'https://welintonfer.com/assets/seo/seo-homepage.png',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Dublin',
+      addressCountry: 'Ireland'
+    },
+    email: 'hello@welintonfer.com',
+    telephone: '+353-1-234-5678',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Freelance'
+    },
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Design Institute'
+    },
+    knowsAbout: [
+      'UX Design',
+      'UI Design', 
+      'Frontend Development',
+      'React',
+      'Next.js',
+      'TypeScript',
+      'User Experience',
+      'Web Design',
+      'Responsive Design',
+      'JavaScript',
+      'CSS',
+      'HTML'
+    ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Senior UX/UI Designer & Frontend Developer',
+      occupationLocation: {
+        '@type': 'Place',
+        name: 'Dublin, Ireland'
+      },
+      skills: [
+        'UX Design',
+        'UI Design',
+        'Frontend Development', 
+        'React',
+        'Next.js',
+        'TypeScript',
+        'User Experience',
+        'Web Design',
+        'Responsive Design'
+      ],
+      experienceLevel: 'Senior',
+      yearsOfExperience: experienceYears
+    }
+  };
+
   return (
-    <html lang="en" suppressHydrationWarning className="">
+    <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://www.creative-ton.com" />
-        <meta name="color-scheme" content="dark light" />
-        
-        {/* JSON-LD Structured Data - Enhanced Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "@id": "https://www.creative-ton.com/#website",
-                "name": "Wellington Alexander - UX/UI Designer Portfolio",
-                "description": "Professional UX/UI Designer portfolio showcasing 14+ years of digital experience expertise in Portugal",
-                "url": "https://www.creative-ton.com",
-                "inLanguage": "en-US",
-                "publisher": {
-                  "@id": "https://www.creative-ton.com/#person"
-                },
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://www.creative-ton.com/search?q={search_term_string}"
-                  },
-                  "query-input": "required name=search_term_string"
-                }
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": ["Person", "Organization"],
-                "@id": "https://www.creative-ton.com/#person",
-                "name": "Wellington Alexander",
-                "alternateName": "Wellington Alexander Design",
-                "jobTitle": "Senior UX/UI Designer & Digital Experience Expert",
-                "description": "Senior UX/UI Designer with over 14 years of experience specializing in user-centered design, UX research, digital strategy, and innovative front-end development. Based in Portimão, Portugal.",
-                "url": "https://www.creative-ton.com",
-                "image": "https://www.creative-ton.com/assets/seo/seo-homepage.png",
-                "sameAs": [
-                  "https://www.linkedin.com/in/wellington-alexander",
-                  "https://github.com/wellington-alexander",
-                  "https://www.behance.net/wellington-alexander"
-                ],
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Portimão",
-                  "addressRegion": "Algarve",
-                  "addressCountry": "PT"
-                },
-                "hasOccupation": {
-                  "@type": "Occupation",
-                  "name": "UX/UI Designer",
-                  "occupationLocation": {
-                    "@type": "Place",
-                    "name": "Portugal"
-                  },
-                  "experienceRequirements": "14+ years",
-                  "skills": [
-                    "User Experience Design",
-                    "User Interface Design",
-                    "User Research",
-                    "Information Architecture",
-                    "Interaction Design",
-                    "Visual Design",
-                    "Prototyping",
-                    "Usability Testing"
-                  ]
-                },
-                "knowsAbout": [
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "UX Design",
-                    "description": "User Experience Design"
-                  },
-                  {
-                    "@type": "DefinedTerm", 
-                    "name": "UI Design",
-                    "description": "User Interface Design"
-                  },
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "User Research",
-                    "description": "User behavior analysis and testing"
-                  },
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "Digital Strategy",
-                    "description": "Strategic digital product planning"
-                  },
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "Front-end Development", 
-                    "description": "HTML, CSS, JavaScript development"
-                  },
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "Design Systems",
-                    "description": "Scalable design component libraries"
-                  },
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "Figma",
-                    "description": "Professional design and prototyping tool"
-                  },
-                  {
-                    "@type": "DefinedTerm",
-                    "name": "Adobe Creative Suite",
-                    "description": "Professional design software suite"
-                  }
-                ],
-                "worksFor": {
-                  "@type": "Organization",
-                  "name": "Freelance",
-                  "description": "Independent UX/UI Design Consultant"
-                },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "contactType": "Professional Inquiries",
-                  "availableLanguage": ["English", "Portuguese"],
-                  "url": "https://www.creative-ton.com/#contact"
-                },
-                "award": [
-                  "14+ Years Professional Experience",
-                  "Leading Brands Portfolio Experience"
-                ],
-                "makesOffer": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "UX/UI Design Services",
-                      "description": "Professional user experience and interface design services"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "User Research & Testing",
-                      "description": "Comprehensive user research and usability testing services"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Design Systems & Prototyping",
-                      "description": "Creation of scalable design systems and interactive prototypes"
-                    }
-                  }
-                ]
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "SiteNavigationElement",
-                "@id": "https://www.creative-ton.com/#navigation",
-                "name": "Main Navigation",
-                "hasPart": [
-                  {
-                    "@type": "SiteNavigationElement",
-                    "name": "Home",
-                    "url": "https://www.creative-ton.com",
-                    "description": "Wellington Alexander UX/UI Designer homepage"
-                  },
-                  {
-                    "@type": "SiteNavigationElement", 
-                    "name": "What I Do",
-                    "url": "https://www.creative-ton.com/what-i-do",
-                    "description": "UX/UI Design process and services"
-                  },
-                  {
-                    "@type": "SiteNavigationElement",
-                    "name": "Work",
-                    "url": "https://www.creative-ton.com/work", 
-                    "description": "Portfolio and case studies"
-                  }
-                ]
-              }
-            ])
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ClientAnimatedCursor />
-        <ClientSideAnalytics />
         {children}
+        <ClientSideScript />
       </body>
     </html>
   );
 }
-

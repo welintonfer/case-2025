@@ -11,13 +11,13 @@ import SkillsIcons from "./SkillsIcons";
 import CopyRight from "./CopyRight";
 
 export default function TemplateHome() {
-  const [isDarkMode, setIsDarkMode] = useState(false); // Inicia como false para evitar hydration mismatch
-  const [hydrated, setHydrated] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Inicia como true para evitar hydration mismatch
+  const [mounted, setMounted] = useState(false);
   const formRef = useRef<HTMLDivElement>(null); // Referência ao formulário de contato
 
   // Função para alternar o modo escuro/claro
   const toggleDarkMode = () => {
-    if (hydrated) {
+    if (mounted) {
       const html = document.documentElement;
       const newMode = !isDarkMode;
       html.classList.toggle("dark", newMode);
@@ -26,17 +26,25 @@ export default function TemplateHome() {
   };
 
   useEffect(() => {
-    // Sempre inicia no dark mode como padrão, mas só após a hidratação
-    setIsDarkMode(true);
+    // Marca como montado e configura o tema
+    setMounted(true);
     const html = document.documentElement;
     html.classList.add("dark");
-    setHydrated(true); // Marca o componente como montado no cliente
   }, []);
 
   // Função para rolar até o formulário de contato ao clicar em "Hire me"
   const toggleForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Não renderiza nada até estar montado para evitar hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="overflow-hidden">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-900" />
+      </div>
+    );
+  }
 
   return (
     <div className="overflow-hidden">

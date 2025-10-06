@@ -95,7 +95,7 @@ export default function WhatIDoPageClient() {
           <div className="container mx-auto flex flex-col justify-center items-center">
             <div className="flex flex-col gap-5 md:flex-row md:items-end justify-between">
               <div>
-                <h2 className="h3 pb-6 text-center font-semibold text-gray-950">01. Understanding</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.157rem] pb-6 text-center font-semibold text-gray-950">01. Understanding</h2>
                 <p className="text-center max-w-3xl mx-auto text-gray-600">
                   Effective UX design prioritises user needs with intuitive navigation, clear messaging, and visually appealing design for a seamless experience.
                 </p>
@@ -181,7 +181,7 @@ export default function WhatIDoPageClient() {
           <div className="container mx-auto flex flex-col justify-center items-center">
             <div className="flex flex-col gap-5 md:flex-row md:items-end justify-between">
               <div>
-                <h2 className="h3 pb-6 text-center font-semibold text-gray-950">02. Discover</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.157rem] pb-6 text-center font-semibold text-gray-950">02. Discover</h2>
                 <p className="text-center max-w-3xl mx-auto text-gray-600">
                   In crafting a seamless user experience, wireframing is our pivotal step. With a mobile-first approach, we create low-fidelity wireframes a symphony of design simplicity. Each element plays a carefully orchestrated note in the pursuit of an optimal user experience. Testing becomes our compass, guiding us toward a transformative destination. This isn't just wireframing; it's sculpting the digital canvas with precision and foresight.
                 </p>
@@ -309,7 +309,7 @@ export default function WhatIDoPageClient() {
           <div className="container mx-auto flex flex-col justify-center items-center">
             <div className="flex flex-col gap-5 md:flex-row md:items-end justify-between">
               <div>
-                <h2 className="h3 pb-6 text-center font-semibold text-gray-950">03. Wireframe</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.157rem] pb-6 text-center font-semibold text-gray-950">03. Wireframe</h2>
                 <p className="text-center max-w-3xl mx-auto text-gray-600">
                   In the realm of UX design, a comprehensive discovery phase isn't just crucial—it's the heartbeat. We embark on a strategic odyssey, navigating with meticulous planning, in-depth research, and wielding tools like proto-personas, mood boards, and journey maps as our compass. This isn't just design; it's a journey to understand and transcend user experience.
                 </p>
@@ -414,7 +414,7 @@ export default function WhatIDoPageClient() {
           <div className="container mx-auto flex flex-col justify-center items-center">
             <div className="flex flex-col gap-5 md:flex-row md:items-end justify-between">
               <div>
-                <h2 className="h3 pb-6 text-center font-semibold text-gray-950">04. Prototype</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.157rem] pb-6 text-center font-semibold text-gray-950">04. Prototype</h2>
                 <p className="text-center max-w-3xl mx-auto text-gray-600">
                   Prototyping with Figma, Invisionapp, and UXPin is a crucial UX design phase that involves creating interactive mockups, testing, and refining the user experience.
                 </p>
@@ -497,7 +497,7 @@ export default function WhatIDoPageClient() {
           <div className="container mx-auto flex flex-col justify-center items-center">
             <div className="flex flex-col gap-5 md:flex-row md:items-end justify-between">
               <div>
-                <h2 className="h3 pb-6 text-center font-semibold text-gray-950">05. Testing</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.157rem] pb-6 text-center font-semibold text-gray-950">05. Testing</h2>
                 <p className="text-center max-w-3xl mx-auto text-gray-600">
                   Testing and monitoring user behaviour with tools like Hotjar is crucial in UX design, enhancing the user experience to align with your audience's needs and preferences.
                 </p>
