@@ -1,0 +1,36 @@
+{
+  "name": "react-fundamentos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@splinetool/react-spline": "^4.0.0",
+    "@tabler/icons-react": "^3.14.0",
+    "gsap": "^3.12.5",
+    "next": "^15.0.2",
+    "nodemailer": "^6.9.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20.4.0",
+    "@types/nodemailer": "^6.4.6",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^13.4.12",
+    "file-loader": "^6.2.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2"
+  }
+}

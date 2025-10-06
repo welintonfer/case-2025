@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  width: 100%;
+  padding: 11px 15px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: flex-end;
+  border-top: 3px solid $smoky-black;
+  background: $nyanza;
+  p {
+    color: $smoky-black;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    opacity: 0.7;
+  }
+}

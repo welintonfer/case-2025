@@ -1,0 +1,21 @@
+.button_ {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $smoky-black;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid $smoky-black;
+  padding: 0.9rem 2.3rem;
+  transition: all 0.2s;
+  border-radius: 3.2rem;
+  border: 0.2rem solid $smoky-black;
+  background: $color-white;
+  box-shadow: 1px 1px 0px 0px $smoky-black, 2px 2px 0px 0px $smoky-black,
+    3px 3px 0px 0px $smoky-black;
+
+  &:hover {
+    background-color: $calamansi;
+    box-shadow: 1px 1px 0px 0px $smoky-black;
+    margin-top: 2px;
+  }
+}

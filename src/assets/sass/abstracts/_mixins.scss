@@ -1,0 +1,24 @@
+// Este código é um mixin em SCSS chamado "clearfix". Um mixin é basicamente uma coleção de declarações CSS que podem ser reutilizadas em diferentes partes do seu código.
+
+// O mixin clearfix é usado para resolver problemas de flutuação em elementos. Quando um elemento é flutuado, ele é retirado do fluxo normal do documento, e pode resultar em comportamentos inesperados. O clearfix cria um pseudo-elemento ::after que é adicionado ao final do elemento, e é configurado para limpar todas as flutuações.
+
+// O código do mixin clearfix contém apenas uma declaração: um seletor &::after que se refere ao elemento que está usando o mixin. As declarações dentro desse seletor definem a aparência e o comportamento do pseudo-elemento ::after.
+
+// O conteúdo do pseudo-elemento é definido como uma string vazia (""). Em seguida, a propriedade display é definida como "table", o que permite que o elemento ocupe o espaço disponível em seu contêiner. Finalmente, a propriedade clear é definida como "both", que remove as flutuações tanto à esquerda quanto à direita do elemento.
+
+// Para usar o mixin clearfix, basta incluí-lo em um seletor que está flutuando. Por exemplo:
+
+// .container {
+// float: left;
+// @include clearfix;
+// }
+
+// Este código flutua um elemento com a classe "container" à esquerda e aplica o mixin clearfix para resolver problemas de flutuação.
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

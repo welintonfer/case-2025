@@ -1,0 +1,546 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; é a melhor pratica coloca-lo na Body e usar box-sizing: inherit; no Root*/
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.rounded__1 {
+  border-radius: 1px;
+}
+
+.rounded__2 {
+  border-radius: 2px;
+}
+
+.rounded__3 {
+  border-radius: 3px;
+}
+
+.rounded__4 {
+  border-radius: 4px;
+}
+
+.rounded__5 {
+  border-radius: 5px;
+}
+
+.rounded__6 {
+  border-radius: 6px;
+}
+
+.rounded__7 {
+  border-radius: 7px;
+}
+
+.rounded__8 {
+  border-radius: 8px;
+}
+
+.rounded__9 {
+  border-radius: 9px;
+}
+
+.rounded__10 {
+  border-radius: 10px;
+}
+
+.rounded__11 {
+  border-radius: 11px;
+}
+
+.rounded__12 {
+  border-radius: 12px;
+}
+
+.rounded__13 {
+  border-radius: 13px;
+}
+
+.rounded__14 {
+  border-radius: 14px;
+}
+
+.rounded__15 {
+  border-radius: 15px;
+}
+
+.rounded__16 {
+  border-radius: 16px;
+}
+
+.rounded__17 {
+  border-radius: 17px;
+}
+
+.rounded__18 {
+  border-radius: 18px;
+}
+
+.rounded__19 {
+  border-radius: 19px;
+}
+
+.rounded__20 {
+  border-radius: 20px;
+}
+
+.title-component {
+  flex: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.py__1 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.py__2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.py__3 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.py__4 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.py__5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.py__6 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.py__7 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.py__8 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.py__9 {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.py__10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.py__11 {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.py__12 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.py__13 {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.py__14 {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.py__15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.py__16 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.py__17 {
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.py__18 {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.py__19 {
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+
+.py__20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.py__21 {
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.py__22 {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.py__23 {
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+
+.py__24 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.py__25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.py__26 {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.py__27 {
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+.py__28 {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.py__29 {
+  margin-top: 29px;
+  margin-bottom: 29px;
+}
+
+.py__30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.py__31 {
+  margin-top: 31px;
+  margin-bottom: 31px;
+}
+
+.py__32 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.py__33 {
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+
+.py__34 {
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+
+.py__35 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.py__36 {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.py__37 {
+  margin-top: 37px;
+  margin-bottom: 37px;
+}
+
+.py__38 {
+  margin-top: 38px;
+  margin-bottom: 38px;
+}
+
+.py__39 {
+  margin-top: 39px;
+  margin-bottom: 39px;
+}
+
+.py__40 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.py__41 {
+  margin-top: 41px;
+  margin-bottom: 41px;
+}
+
+.py__42 {
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.py__43 {
+  margin-top: 43px;
+  margin-bottom: 43px;
+}
+
+.py__44 {
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
+.py__45 {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.py__46 {
+  margin-top: 46px;
+  margin-bottom: 46px;
+}
+
+.py__47 {
+  margin-top: 47px;
+  margin-bottom: 47px;
+}
+
+.py__48 {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.py__49 {
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+.py__50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.py__51 {
+  margin-top: 51px;
+  margin-bottom: 51px;
+}
+
+.py__52 {
+  margin-top: 52px;
+  margin-bottom: 52px;
+}
+
+.py__53 {
+  margin-top: 53px;
+  margin-bottom: 53px;
+}
+
+.py__54 {
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+.py__55 {
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+
+.py__56 {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+.py__57 {
+  margin-top: 57px;
+  margin-bottom: 57px;
+}
+
+.py__58 {
+  margin-top: 58px;
+  margin-bottom: 58px;
+}
+
+.py__59 {
+  margin-top: 59px;
+  margin-bottom: 59px;
+}
+
+.py__60 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.py__61 {
+  margin-top: 61px;
+  margin-bottom: 61px;
+}
+
+.py__62 {
+  margin-top: 62px;
+  margin-bottom: 62px;
+}
+
+.py__63 {
+  margin-top: 63px;
+  margin-bottom: 63px;
+}
+
+.py__64 {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.py__65 {
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+
+.py__66 {
+  margin-top: 66px;
+  margin-bottom: 66px;
+}
+
+.py__67 {
+  margin-top: 67px;
+  margin-bottom: 67px;
+}
+
+.py__68 {
+  margin-top: 68px;
+  margin-bottom: 68px;
+}
+
+.py__69 {
+  margin-top: 69px;
+  margin-bottom: 69px;
+}
+
+.py__70 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.py__71 {
+  margin-top: 71px;
+  margin-bottom: 71px;
+}
+
+.py__72 {
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+
+.py__73 {
+  margin-top: 73px;
+  margin-bottom: 73px;
+}
+
+.py__74 {
+  margin-top: 74px;
+  margin-bottom: 74px;
+}
+
+.py__75 {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.py__76 {
+  margin-top: 76px;
+  margin-bottom: 76px;
+}
+
+.py__77 {
+  margin-top: 77px;
+  margin-bottom: 77px;
+}
+
+.py__78 {
+  margin-top: 78px;
+  margin-bottom: 78px;
+}
+
+.py__79 {
+  margin-top: 79px;
+  margin-bottom: 79px;
+}
+
+.py__80 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.btn-case-study {
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  color: #0f0f0f;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 2.3rem;
+  transition: 0.2s;
+  border-radius: 3.2rem;
+  border: 0.2rem solid #0f0f0f;
+  background: white;
+  box-shadow: #0f0f0f 1px 1px 0px 0px, #0f0f0f 2px 2px 0px 0px, #0f0f0f 3px 3px 0px 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}

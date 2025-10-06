@@ -1,0 +1,27 @@
+.hero {
+  &__avatar {
+    img {
+    }
+  }
+  &__content {
+    .display-1 {
+      text-align: center;
+      font-weight: 800;
+      .ux-expert {
+        background: url("/src/assets/img/ux_line.svg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 411px) {
+}

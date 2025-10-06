@@ -1,0 +1,531 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$smoky-black: #0F0F0F;
+$floral-white: #FDFAEF;
+$soap: #CFC9F3;
+$nyanza: #DAF7D2;
+$calamansi: #F1FEA1;
+$vivid-red-tangelo: #FEA1A1;
+$hh-temp: #ECE1CD;
+
+.hh-temp {
+  background-color: $hh-temp;
+}
+
+:root {
+  /* Light Mode (padrão) - invertendo para light mode ser o padrão */
+  --background: $floral-white;
+  --foreground: $smoky-black;
+  --text-primary: $smoky-black;
+  --text-secondary: #444444;
+  --border-color: #E5E5E5;
+  --card-background: #FFFFFF;
+}
+
+.dark {
+  /* Dark Mode */
+  --background: $smoky-black;
+  --foreground: $floral-white;
+  --text-primary: $floral-white;
+  --text-secondary: #CCCCCC;
+  --border-color: #333333;
+  --card-background: #1A1A1A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  
+}
+
+body, a, button {
+  cursor: none;
+  pointer-events: auto; /* Garante que pointer events funcionem */
+
+  &:hover {
+    cursor: none;
+  }
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+
+.isolate-bg {
+  background-color: white !important;
+  
+  .dark & {
+    background-color: #1A1A1A !important;
+  }
+}
+
+.isolate-color {
+  color: black !important;
+  
+  .dark & {
+    color: white !important;
+  }
+}
+
+/* Melhor contraste para textos */
+.text-high-contrast {
+  color: var(--text-primary);
+}
+
+.text-medium-contrast {
+  color: var(--text-secondary);
+}
+
+/* Background com melhor contraste */
+.bg-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+}
+
+.aspect-w-16 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-h-9 {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 400px) {
+  div[max-w="20%"] {
+    max-width: 50%; /* Em telas pequenas, 2 logos por linha */
+  }
+}
+
+
+
+
+.theme {
+  &__bg {
+    &-smoky-black {
+      background-color: $smoky-black;
+    }
+    &-floral-white {
+      background-color: $floral-white;
+    }
+    &-soap {
+      background-color: $soap;
+    }
+    &-nyanza {
+      background-color: $nyanza;
+    }
+    &-calamansi {
+      background-color: $calamansi;
+    }
+    &-vivid-red-tangelo {
+      background-color: $vivid-red-tangelo;
+    }
+  }
+
+  &__text {
+    &-smoky-black {
+      color: $smoky-black;
+    }
+    &-floral-white {
+      color: $floral-white;
+    }
+    &-soap {
+      color: $soap;
+    }
+    &-nyanza {
+      color: $nyanza;
+    }
+    &-calamansi {
+      color: $calamansi;
+    }
+    &-vivid-red-tangelo {
+      color: $vivid-red-tangelo;
+    }
+  }
+}
+
+.theme__bg-glass {
+  background-color: rgba(15, 15, 15, 0.6);
+  /* Fundo semi-transparente */
+  backdrop-filter: blur(16px) brightness(75%);
+  -webkit-backdrop-filter: blur(16px) brightness(75%);
+  border-radius: 1rem;
+  color: #FDFAEF; /* Texto claro para contraste */
+  
+  .dark & {
+    background-color: rgba(253, 250, 239, 0.9);
+    color: #0F0F0F; /* Texto escuro para contraste */
+  }
+}
+
+
+@keyframes moveAndChangeColor {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(50px, -100px) scale(1.1);
+  }
+  66% {
+    transform: translate(-50px, 100px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes changeColor {
+  0%, 100% {
+    background: #f1fea1;
+  }
+  33% {
+    background: #cfc9f3;
+  }
+  66% {
+    background: #daf7d2;
+  }
+}
+
+/* Estilos das formas com animação - iOS Safari Fix */
+.bg-1,
+.bg-2,
+.bg-3 {
+  position: absolute;
+  flex-shrink: 0;
+  filter: blur(250px);
+  z-index: -10;
+  animation: moveAndChangeColor 10s infinite ease-in-out alternate;
+  /* iOS Safari fix: force hardware acceleration and contain */
+  transform: translateZ(0);
+  will-change: transform;
+  contain: layout style paint;
+  /* Prevent overflow on iOS */
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .bg-1,
+  .bg-2,
+  .bg-3 {
+    /* Additional containment for iOS Safari */
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Header specific fixes for iOS Safari overflow issues */
+.header-container {
+  /* Força um novo contexto de stacking no iOS */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  isolation: isolate;
+  
+  /* Força clipping para iOS Safari */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+}
+
+.header-animation-container {
+  /* Container específico para animações */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  position: absolute;
+  
+  /* Força clipping no iOS */
+  -webkit-clip-path: inset(0);
+  clip-path: inset(0);
+  
+  /* Força containment */
+  contain: layout style paint;
+}
+
+/* Animação de mudança de cor para bg-1 */
+.bg-1 {
+  width: min(1200px, 150vw);
+  height: min(1200px, 150vh);
+  border-radius: 758px;
+  background: #f1fea1;
+  top: min(-309px, -30vh);
+  right: min(0px, -10vw);
+  animation: moveAndChangeColor 10s infinite ease-in-out alternate,
+             changeColor 6s infinite ease-in-out alternate;
+}
+
+/* Animação para bg-2 */
+.bg-2 {
+  width: min(1500px, 180vw);
+  height: min(1500px, 180vh);
+  border-radius: 1163px;
+  background: #cfc9f3;
+  left: min(-40px, -5vw);
+  top: min(-921px, -80vh);
+}
+
+/* Animação para bg-3 */
+.bg-3 {
+  width: min(600px, 80vw);
+  height: min(1200px, 150vh);
+  border-radius: 660px;
+  background: #daf7d2;
+  left: min(-110px, -15vw);
+  top: min(300px, 30vh);
+}
+
+
+
+// Mapa com tamanhos e pesos para as headings
+$headings: (
+  h1: 5.61rem,
+  h2: 4.209rem,
+  h3: 3.157rem,
+  h4: 2.369rem,
+  h5: 1.777rem,
+  h6: 1.333rem,
+  p: 1rem,
+  small: 0.75rem,
+  tiny: 0.563rem
+);
+
+// Mixin para gerar estilos de headings
+@mixin heading($size) {
+  font-size: $size;
+  line-height: 1.2;
+  margin: 0;
+}
+
+// Geração automática das classes de headings e modificadores de peso
+@each $name, $size in $headings {
+  .#{$name} {
+    @include heading($size); // Aplica o tamanho e estilos principais
+
+    // Modificadores de peso de fonte
+    @for $weight from 100 through 900 {
+      &__#{$weight} {
+        font-size: $size; // Mantém o tamanho original
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px; /* Espaço entre os projetos */
+  justify-content: space-between;
+}
+
+/* Estilo para Desktop */
+.project-item {
+  flex: 1 1 calc(50% - 16px); /* Ocupa 50% da largura com espaço */
+  max-width: calc(50% - 16px); /* Garante a largura máxima em 50% */
+}
+
+/* Estilo para Mobile (Abaixo de 768px) */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+  .project-item {
+    flex: 1 1 100%; /* Ocupa 100% da largura */
+    width: 100%; /* Garante largura total no mobile */
+  }
+}
+
+
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__mini-title {
+    color: $smoky-black;
+    font-family: Inter;
+    font-size: 13.33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 135.034% */
+    text-align: center;
+    padding-bottom: 24px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    // gap: 48px;
+    li {
+      display: flex;
+      // width: 40px;
+      height: 40px;
+      padding: 8.15px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 6.624px;
+      background: $floral-white;
+      transform: scale(1.2);
+
+      .skill-icon {
+        display: flex;
+        // width: 37px;
+        height: 40px;
+        padding: 8.15px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 6.624px;
+        background: $floral-white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 992px) {
+}
+
+@media (min-width: 412px) and (max-width: 560px) {
+  .skills {
+    padding-top: 0px;
+    &__mini-title {
+    }
+    ul {
+      width: 85%;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 411px) {
+  .skills {
+    padding-top: 32px;
+    &__mini-title {
+    }
+    ul {
+      width: 90%;
+      li {
+        .skill-icon {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 32px;
+    &__mini-title {
+    }
+    ul {
+      width: 100%;
+      li {
+        .skill-icon {
+        }
+      }
+    }
+  }
+}
+
+
+.rounded {
+  @for $i from 1 through 20 {
+    &__#{$i} {
+      border-radius: #{$i}px;
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border: solid 1.5px $smoky-black;
+  background-color: $vivid-red-tangelo;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $smoky-black;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $smoky-black;
+}
+
+.nextjs-toast, 
+.nextjs-toast-errors-parent, 
+.nextjs-error-with-static,
+.nextjs-toast, 
+.nextjs-static-indicator-toast-wrapper {
+  display: none !important;
+}
+
+/* Esconde o ícone da Vercel no footer */
+[data-vercel-footer] {
+  display: none !important;
+}
+
+
+
+.single-project {
+  
+  p {
+    // color: $smoky-black;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    opacity: .8;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    ul {
+      li {
+        p {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+  
+}
+
+

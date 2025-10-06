@@ -1,0 +1,378 @@
+.case-study-single__design-process {
+  margin-bottom: 60px;
+}
+.about-me-hero {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding-top: 110px;
+  padding-bottom: 60px;
+  gap: 32px;
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    // padding-top: 110px;
+    img {
+      width: 94px;
+    }
+    .hello {
+      color: $smoky-black;
+      text-align: center;
+      font-family: Inter;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+  &__content {
+    .display-1 {
+      text-align: center;
+      font-weight: 800;
+      .ux-expert {
+        background: url("/src/assets/img/ux_line.svg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  width: 100%;
+  gap: 60px;
+  &__h2 {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 996px;
+    list-style: none;
+    li {
+      display: flex;
+      width: 100%;
+      padding: 32px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 10px;
+      border: 3px solid $smoky-black;
+      background: $floral-white;
+      box-shadow: 1px 1px 0px 0px $smoky-black, 2px 2px 0px 0px $smoky-black,
+        3px 3px 0px 0px $smoky-black, 4px 4px 0px 0px $smoky-black,
+        5px 5px 0px 0px $smoky-black;
+      backdrop-filter: blur(41.5px);
+      gap: 16px;
+      overflow: hidden;
+      p {
+        width: 100%;
+      }
+      .keys {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0px;
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        padding: 8px 0 12px 15px;
+        &__key {
+          display: inline-block;
+          width: auto;
+          border: none;
+          box-shadow: none;
+          padding: 0px;
+          text-align: left;
+          color: $smoky-black;
+          font-family: Inter;
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+          opacity: 0.6;
+        }
+      }
+      .skills {
+        p {
+          opacity: 0.8;
+        }
+      }
+      .head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 16px;
+        .heading {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 16px;
+          .img-logo {
+            width: 45px;
+            border-radius: 1.125rem;
+            box-shadow: 0px 4.5px 13.5px 0px rgba(0, 0, 0, 0.25);
+          }
+          .h3 {
+            text-align: left;
+            font-size: 2.304rem;
+          }
+        }
+        .time-place {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          .time {
+            color: $smoky-black;
+            text-align: right;
+            font-family: Inter;
+            font-size: 1.333rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px; /* 135.034% */
+          }
+          .place {
+            background: url("/src/assets/img/about-me/location.svg");
+            background-repeat: no-repeat;
+            background-position: center left;
+            color: $smoky-black;
+            text-align: right;
+            font-family: Inter;
+            font-size: 1.333rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px; /* 135.034% */
+            opacity: 0.8;
+            padding-left: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  .case-study-single__design-process {
+    margin-bottom: 40px;
+    p {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    ul {
+      flex-wrap: wrap;
+    }
+  }
+  .about-me-hero {
+    &__avatar {
+      img {
+      }
+      .hello {
+      }
+    }
+    &__content {
+      .display-1 {
+        .ux-expert {
+        }
+      }
+    }
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    width: 100%;
+    gap: 40px;
+    &__h2 {
+      text-align: center;
+    }
+    ul {
+      gap: 40px;
+      width: 100%;
+      list-style: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      li {
+        display: flex;
+        width: 100%;
+        padding: 32px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 16px;
+        overflow: hidden;
+        p {
+          width: 100%;
+        }
+        .keys {
+          &__key {
+          }
+        }
+        .skills {
+          p {
+            opacity: 0.8;
+          }
+        }
+        .head {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: start;
+          justify-content: space-between;
+          width: 100%;
+          padding-bottom: 16px;
+          .heading {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+            .img-logo {
+            }
+            .h3 {
+              text-align: left;
+              font-size: 1.9rem;
+              line-height: 2.3rem;
+            }
+          }
+          .time-place {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 24px;
+            width: 100%;
+            .time {
+            }
+            .place {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .case-study-single__design-process {
+    margin-bottom: 40px;
+    p {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    ul {
+      flex-wrap: wrap;
+    }
+  }
+  .about-me-hero {
+    &__avatar {
+      img {
+      }
+      .hello {
+      }
+    }
+    &__content {
+      .display-1 {
+        .ux-expert {
+        }
+      }
+    }
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    width: 100%;
+    gap: 40px;
+    &__h2 {
+      text-align: center;
+    }
+    ul {
+      gap: 40px;
+      width: 100%;
+      list-style: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      li {
+        display: flex;
+        width: 100%;
+        padding: 32px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 16px;
+        overflow: hidden;
+        p {
+          width: 100%;
+        }
+        .keys {
+          &__key {
+          }
+        }
+        .skills {
+          p {
+            opacity: 0.8;
+          }
+        }
+        .head {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: start;
+          justify-content: space-between;
+          width: 100%;
+          padding-bottom: 16px;
+          .heading {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+            .img-logo {
+            }
+            .h3 {
+              text-align: left;
+              font-size: 1.9rem;
+              line-height: 2.3rem;
+            }
+          }
+          .time-place {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 24px;
+            width: 100%;
+            .time {
+            }
+            .place {
+            }
+          }
+        }
+      }
+    }
+  }
+}

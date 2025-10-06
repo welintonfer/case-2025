@@ -1,0 +1,661 @@
+.contact-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 48px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 1040px;
+    border: 3px solid $smoky-black;
+    background: $floral-white;
+    box-shadow: 1px 1px 0px 0px $smoky-black, 2px 2px 0px 0px $smoky-black,
+      3px 3px 0px 0px $smoky-black, 4px 4px 0px 0px $smoky-black,
+      5px 5px 0px 0px $smoky-black;
+    backdrop-filter: blur(41.5px);
+    padding-bottom: 55px;
+
+    .arrow,
+    .dots,
+    .draft,
+    .globo,
+    .plus,
+    .star {
+      position: absolute;
+      z-index: -1;
+    }
+    .arrow {
+      top: 216px;
+      left: 190px;
+    }
+    .dots {
+      top: 56px;
+      left: 20px;
+    }
+    .draft {
+      bottom: 18px;
+      left: 225px;
+    }
+    .star {
+      right: 32px;
+      top: 187px;
+    }
+    .globo {
+      right: 150px;
+      top: 50px;
+    }
+    .plus {
+      left: 44px;
+      bottom: 32px;
+    }
+    .top-bar {
+      display: flex;
+      width: 100%;
+      height: 36px;
+      padding: 4px 24px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px 6px 0px 0px;
+      border-bottom: 3px solid $smoky-black;
+      background: $soap;
+      .left-buttons {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        .red,
+        .yellow,
+        .green {
+          width: 12px;
+          height: 12px;
+          border-radius: 6px;
+          border: solid 1.5px $smoky-black;
+        }
+        .red {
+          background-color: $vivid-red-tangelo;
+          stroke: $smoky-black;
+          filter: drop-shadow(1px 1px 0px $smoky-black)
+            drop-shadow(1px 1px 0px $smoky-black);
+        }
+        .yellow {
+          background-color: $deep-champagne;
+          stroke: $smoky-black;
+          filter: drop-shadow(1px 1px 0px $smoky-black)
+            drop-shadow(1px 1px 0px $smoky-black);
+        }
+        .green {
+          background-color: $nyanza;
+          stroke: $smoky-black;
+          filter: drop-shadow(1px 1px 0px $smoky-black)
+            drop-shadow(1px 1px 0px $smoky-black);
+        }
+      }
+      .right-buttons {
+      }
+    }
+
+    .content {
+      display: flex;
+      width: auto;
+      padding: 24px 148px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      flex-shrink: 0;
+      .h2 {
+        font-weight: 700;
+        padding-left: 148px;
+        padding-right: 148px;
+        text-align: center;
+      }
+
+      .box-mail {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        .icon-mail {
+          display: flex;
+          height: 50px;
+          padding: 21px 14px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 10px 0px 0px 10px;
+          border-top: 3px solid $smoky-black;
+          border-right: none;
+          border-bottom: 3px solid $smoky-black;
+          border-left: 3px solid $smoky-black;
+          background: $color-white;
+          color: $smoky-black;
+          text-align: center;
+          font-family: Inter;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px; /* 175% */
+        }
+        .mail {
+          min-width: 246px;
+          display: flex;
+          height: 50px;
+          padding: 21px -4px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 0px;
+          border-top: 3px solid $smoky-black;
+          border-right: none;
+          border-bottom: 3px solid $smoky-black;
+          border-left: none;
+          background: $color-white;
+          color: $smoky-black;
+          text-align: center;
+          font-family: Inter;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px; /* 175% */
+        }
+        .input-btn-copy {
+          .icon-copy {
+            display: flex;
+            height: 50px;
+            padding: 21px 14px;
+            align-items: center;
+            gap: 10px;
+            border-radius: 0px 10px 10px 0px;
+            border-top: 3px solid $smoky-black;
+            border-right: 3px solid $smoky-black;
+            border-bottom: 3px solid $smoky-black;
+            border-left: none;
+            background: $color-white;
+            color: $smoky-black;
+            text-align: center;
+            font-family: Inter;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px; /* 175% */
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .contact-label {
+    transform: scale(0.88);
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .contact-label {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transform: scale(0.93);
+    gap: 48px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      .arrow,
+      .dots,
+      .draft,
+      .globo,
+      .plus,
+      .star {
+        position: absolute;
+      }
+      .arrow {
+        top: 200px;
+        left: 60px;
+      }
+      .dots {
+        top: 56px;
+        left: 20px;
+      }
+      .draft {
+        bottom: 18px;
+        left: 225px;
+      }
+      .star {
+        right: 32px;
+        top: 300px;
+      }
+      .globo {
+        right: -5px;
+        top: 90px;
+      }
+      .plus {
+        left: 80px;
+        bottom: 15px;
+      }
+
+      .content {
+        display: flex;
+        width: auto;
+        padding: 24px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-shrink: 0;
+        .h2 {
+          font-weight: 700;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        .box-mail {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 766px) and (max-width: 991px) {
+  .contact-label {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transform: scale(0.85);
+    gap: 48px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      .arrow,
+      .dots,
+      .draft,
+      .globo,
+      .plus,
+      .star {
+        position: absolute;
+      }
+      .arrow {
+        top: 200px;
+        left: 60px;
+      }
+      .dots {
+        top: 56px;
+        left: 20px;
+      }
+      .draft {
+        bottom: 18px;
+        left: 225px;
+      }
+      .star {
+        right: 32px;
+        top: 300px;
+      }
+      .globo {
+        right: -5px;
+        top: 90px;
+      }
+      .plus {
+        left: 80px;
+        bottom: 15px;
+      }
+
+      .content {
+        display: flex;
+        width: auto;
+        padding: 24px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-shrink: 0;
+        .h2 {
+          font-weight: 700;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        .box-mail {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 561px) and (max-width: 768px) {
+  .contact-label {
+    transform: scale(0.85);
+    gap: 48px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      .arrow,
+      .dots,
+      .draft,
+      .globo,
+      .plus,
+      .star {
+        position: absolute;
+      }
+      .arrow {
+        top: 200px;
+        left: 60px;
+      }
+      .dots {
+        top: 56px;
+        left: 20px;
+      }
+      .draft {
+        bottom: 18px;
+        left: 225px;
+      }
+      .star {
+        right: 32px;
+        top: 300px;
+      }
+      .globo {
+        right: -5px;
+        top: 90px;
+      }
+      .plus {
+        left: 80px;
+        bottom: 15px;
+      }
+
+      .content {
+        display: flex;
+        width: auto;
+        padding: 24px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-shrink: 0;
+        .h2 {
+          font-weight: 700;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        .box-mail {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 412px) and (max-width: 560px) {
+  .contact-label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transform: scale(0.85);
+    gap: 48px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      .arrow,
+      .dots,
+      .draft,
+      .globo,
+      .plus,
+      .star {
+        position: absolute;
+      }
+      .arrow {
+        top: 330px;
+        left: -60px;
+      }
+      .dots {
+        top: 56px;
+        left: 20px;
+      }
+      .draft {
+        bottom: 18px;
+        left: 225px;
+      }
+      .star {
+        right: -32px;
+        top: 300px;
+      }
+      .globo {
+        right: -20px;
+        top: 90px;
+      }
+      .plus {
+        left: 80px;
+        bottom: 15px;
+      }
+
+      .content {
+        display: flex;
+        width: auto;
+        padding: 24px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-shrink: 0;
+        .h2 {
+          font-weight: 700;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        .box-mail {
+          transform: scale(0.85);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 411px) {
+  .contact-label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transform: scale(0.85);
+    gap: 48px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      .arrow,
+      .dots,
+      .draft,
+      .globo,
+      .plus,
+      .star {
+        position: absolute;
+      }
+      .arrow {
+        top: 330px;
+        left: -60px;
+      }
+      .dots {
+        top: 56px;
+        left: 20px;
+      }
+      .draft {
+        bottom: 18px;
+        left: 225px;
+      }
+      .star {
+        right: -32px;
+        top: 300px;
+      }
+      .globo {
+        right: -20px;
+        top: 90px;
+      }
+      .plus {
+        left: 80px;
+        bottom: 15px;
+      }
+
+      .content {
+        display: flex;
+        width: auto;
+        padding: 24px 148px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-shrink: 0;
+        .h2 {
+          font-weight: 700;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        .box-mail {
+          transform: scale(0.85);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transform: scale(0.85);
+    gap: 48px;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      width: 100%;
+
+      padding-bottom: 55px;
+      overflow: hidden;
+
+      .arrow,
+      .dots,
+      .draft,
+      .globo,
+      .plus,
+      .star {
+        position: absolute;
+      }
+      .arrow {
+        top: 330px;
+        left: -60px;
+      }
+      .dots {
+        top: 56px;
+        left: 20px;
+      }
+      .draft {
+        bottom: 18px;
+        left: 225px;
+      }
+      .star {
+        right: -32px;
+        top: 300px;
+      }
+      .globo {
+        right: -20px;
+        top: 90px;
+      }
+      .plus {
+        left: 80px;
+        bottom: 15px;
+      }
+
+      .content {
+        display: flex;
+        width: auto;
+        padding: 24px 148px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-shrink: 0;
+        .h2 {
+          font-weight: 700;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+        }
+        .box-mail {
+          transform: scale(0.85);
+        }
+      }
+    }
+  }
+}

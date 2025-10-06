@@ -1,0 +1,39 @@
+# Dependências do Node.js
+node_modules/
+
+# Arquivos de compilação e build do Next.js
+.next/
+out/
+
+# Cache do sistema
+*.cache/
+*.log
+.yarn-integrity
+.pnp.*
+
+# Arquivos de build e artefatos
+dist/
+build/
+
+# Arquivos de configuração do sistema e do editor
+.DS_Store
+.env.local
+.env.*.local
+.env
+.vscode/
+
+# Sass e CSS gerados
+*.css.map
+*.scssc
+*.sass-cache
+
+# Artefatos do TypeScript
+*.tsbuildinfo
+
+# Arquivos temporários de teste
+coverage/
+jest-html-reporters-*
+
+# Outros arquivos de cache e config do sistema operacional
+Thumbs.db
+.idea/

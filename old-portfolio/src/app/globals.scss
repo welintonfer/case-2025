@@ -1,0 +1,445 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$smoky-black: #0F0F0F;
+$floral-white: #FDFAEF;
+$soap: #CFC9F3;
+$nyanza: #DAF7D2;
+$calamansi: #F1FEA1;
+$vivid-red-tangelo: #FEA1A1;
+$hh-temp: #ECE1CD;
+
+.hh-temp {
+  background-color: $hh-temp;
+}
+
+:root {
+  --background: $smoky-black;
+  --foreground: $floral-white;
+}
+
+.dark {
+  --background: $floral-white;
+  --foreground: $smoky-black;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  
+}
+
+body, a, button {
+  cursor: none;
+
+  &:hover {
+    cursor: none;
+  }
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+
+.isolate-bg {
+  background-color: white !important;
+}
+
+.isolate-color {
+  color: black !important;
+}
+
+.aspect-w-16 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-h-9 {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 400px) {
+  div[max-w="20%"] {
+    max-width: 50%; /* Em telas pequenas, 2 logos por linha */
+  }
+}
+
+
+
+
+.theme {
+  &__bg {
+    &-smoky-black {
+      background-color: $smoky-black;
+    }
+    &-floral-white {
+      background-color: $floral-white;
+    }
+    &-soap {
+      background-color: $soap;
+    }
+    &-nyanza {
+      background-color: $nyanza;
+    }
+    &-calamansi {
+      background-color: $calamansi;
+    }
+    &-vivid-red-tangelo {
+      background-color: $vivid-red-tangelo;
+    }
+  }
+
+  &__text {
+    &-smoky-black {
+      color: $smoky-black;
+    }
+    &-floral-white {
+      color: $floral-white;
+    }
+    &-soap {
+      color: $soap;
+    }
+    &-nyanza {
+      color: $nyanza;
+    }
+    &-calamansi {
+      color: $calamansi;
+    }
+    &-vivid-red-tangelo {
+      color: $vivid-red-tangelo;
+    }
+  }
+}
+
+.theme__bg-glass {
+  background-color: rgba(15, 15, 15, 0.6); /* Fundo semi-transparente */
+  backdrop-filter: blur(16px) brightness(75%);
+  -webkit-backdrop-filter: blur(16px) brightness(75%);
+  border-radius: 1rem; /* Ajuste opcional */
+}
+
+
+@keyframes moveAndChangeColor {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(50px, -100px) scale(1.1);
+  }
+  66% {
+    transform: translate(-50px, 100px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes changeColor {
+  0%, 100% {
+    background: #f1fea1;
+  }
+  33% {
+    background: #cfc9f3;
+  }
+  66% {
+    background: #daf7d2;
+  }
+}
+
+/* Estilos das formas com animação */
+.bg-1,
+.bg-2,
+.bg-3 {
+  position: absolute;
+  flex-shrink: 0;
+  filter: blur(250px);
+  z-index: -10;
+  animation: moveAndChangeColor 10s infinite ease-in-out alternate;
+}
+
+/* Animação de mudança de cor para bg-1 */
+.bg-1 {
+  width: 1200px;
+  height: 1200px;
+  border-radius: 758px;
+  background: #f1fea1;
+  top: -309px;
+  right: 0;
+  animation: moveAndChangeColor 10s infinite ease-in-out alternate,
+             changeColor 6s infinite ease-in-out alternate;
+}
+
+/* Animação para bg-2 */
+.bg-2 {
+  width: 1500px;
+  height: 1500px;
+  border-radius: 1163px;
+  background: #cfc9f3;
+  left: -40px;
+  top: -921px;
+}
+
+/* Animação para bg-3 */
+.bg-3 {
+  width: 600px;
+  height: 1200px;
+  border-radius: 660px;
+  background: #daf7d2;
+  left: -110px;
+  top: 300px;
+}
+
+
+
+// Mapa com tamanhos e pesos para as headings
+$headings: (
+  h1: 5.61rem,
+  h2: 4.209rem,
+  h3: 3.157rem,
+  h4: 2.369rem,
+  h5: 1.777rem,
+  h6: 1.333rem,
+  p: 1rem,
+  small: 0.75rem,
+  tiny: 0.563rem
+);
+
+// Mixin para gerar estilos de headings
+@mixin heading($size) {
+  font-size: $size;
+  line-height: 1.2;
+  margin: 0;
+}
+
+// Geração automática das classes de headings e modificadores de peso
+@each $name, $size in $headings {
+  .#{$name} {
+    @include heading($size); // Aplica o tamanho e estilos principais
+
+    // Modificadores de peso de fonte
+    @for $weight from 100 through 900 {
+      &__#{$weight} {
+        font-size: $size; // Mantém o tamanho original
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px; /* Espaço entre os projetos */
+  justify-content: space-between;
+}
+
+/* Estilo para Desktop */
+.project-item {
+  flex: 1 1 calc(50% - 16px); /* Ocupa 50% da largura com espaço */
+  max-width: calc(50% - 16px); /* Garante a largura máxima em 50% */
+}
+
+/* Estilo para Mobile (Abaixo de 768px) */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+  .project-item {
+    flex: 1 1 100%; /* Ocupa 100% da largura */
+    width: 100%; /* Garante largura total no mobile */
+  }
+}
+
+
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__mini-title {
+    color: $smoky-black;
+    font-family: Inter;
+    font-size: 13.33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 135.034% */
+    text-align: center;
+    padding-bottom: 24px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    // gap: 48px;
+    li {
+      display: flex;
+      // width: 40px;
+      height: 40px;
+      padding: 8.15px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 6.624px;
+      background: $floral-white;
+      transform: scale(1.2);
+
+      .skill-icon {
+        display: flex;
+        // width: 37px;
+        height: 40px;
+        padding: 8.15px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 6.624px;
+        background: $floral-white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 992px) {
+}
+
+@media (min-width: 412px) and (max-width: 560px) {
+  .skills {
+    padding-top: 0px;
+    &__mini-title {
+    }
+    ul {
+      width: 85%;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 411px) {
+  .skills {
+    padding-top: 32px;
+    &__mini-title {
+    }
+    ul {
+      width: 90%;
+      li {
+        .skill-icon {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 32px;
+    &__mini-title {
+    }
+    ul {
+      width: 100%;
+      li {
+        .skill-icon {
+        }
+      }
+    }
+  }
+}
+
+
+.rounded {
+  @for $i from 1 through 20 {
+    &__#{$i} {
+      border-radius: #{$i}px;
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border: solid 1.5px $smoky-black;
+  background-color: $vivid-red-tangelo;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $smoky-black;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $smoky-black;
+}
+
+.nextjs-toast, 
+.nextjs-toast-errors-parent, 
+.nextjs-error-with-static,
+.nextjs-toast, 
+.nextjs-static-indicator-toast-wrapper {
+  display: none !important;
+}
+
+/* Esconde o ícone da Vercel no footer */
+[data-vercel-footer] {
+  display: none !important;
+}
+
+
+
+.single-project {
+  
+  p {
+    // color: $smoky-black;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    opacity: .8;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    ul {
+      li {
+        p {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+  
+}
+
+

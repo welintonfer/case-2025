@@ -1,0 +1,38 @@
+.sub-hero {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 32px;
+  &__company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 110px;
+    &-logo {
+      width: 224px;
+    }
+    .hello {
+      color: $smoky-black;
+      text-align: center;
+      font-family: Inter;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+  &__content {
+    width: 800px;
+    transform: scale(0.95);
+  }
+  &__heroImgHeading {
+    max-width: 992px;
+    transform: scale(1.24);
+  }
+}
