@@ -94,9 +94,9 @@ export default function RootLayout({
       "image": "https://www.creative-ton.com/assets/seo/seo-homepage.png",
       "url": "https://www.creative-ton.com/",
       "sameAs": [
-        "https://www.linkedin.com/in/welinton-fernandes",
-        "https://github.com/wellington-alexander",
-        "https://www.behance.net/wellington-alexander"
+        "https://www.linkedin.com/in/welintonfernandes/",
+        "https://github.com/welintonfer",
+        "https://dribbble.com/welintonfer"
       ],
       "award": [
         `${experienceYears} Years Professional Experience`,
