@@ -183,7 +183,7 @@ export default function Page() {
 
               <Image
                   src={img01}
-                  alt={`Revolutionizing Eir's Onboarding Experience`}
+                  alt="EIR telecommunications onboarding user interface design showing mobile app screens with improved user experience flow and intuitive navigation"
                   className="w-full h-auto max-w-full rounded__16 my-12"
               />
 
@@ -196,7 +196,7 @@ export default function Page() {
 
               <Image
                 src={img02}
-                alt={`Bridging the Gap with Illustrations`}
+                alt="EIR mobile app interface design featuring custom illustrations that enhance brand identity and create visual cohesion across the user experience"
                 className="w-full h-auto max-w-full rounded__6 my-12"
               />
 

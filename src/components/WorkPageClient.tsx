@@ -195,7 +195,7 @@ function ProjectLink({ href, bgClass, media }: ProjectLinkProps) {
             ) : (
               <Image
                 src={media.src}
-                alt="Project Media"
+                alt={`${href.split('/').pop()?.replace('-', ' ').toUpperCase()} UX/UI Design Case Study - Portfolio by Welinton Fernandes`}
                 className="transition-opacity duration-300 opacity-100 h-full w-full object-cover"
                 width={800}
                 height={600}

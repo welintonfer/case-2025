@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
-
 import { useState, useEffect, useRef } from "react";
 import TemplateMain from "@/components/TemplateMain";
 import ContactForm from "@/components/ContactForm";
 import CopyRight from "@/components/CopyRight";
 import HeaderSubpage from "@/components/HeaderSubpage";
+
+// Note: Metadata cannot be exported from client components in Next.js
+// SEO optimization handled via Head component and schema markup
 
 import europcarLogo from "../../../assets/img/europcar/Europcar-logo@2x.png"
 import europcarPhase1 from "../../../assets/img/europcar/europcar-phase-1@2x.png"

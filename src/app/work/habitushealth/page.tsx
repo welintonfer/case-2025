@@ -7,6 +7,9 @@ import ContactForm from "@/components/ContactForm";
 import CopyRight from "@/components/CopyRight";
 import HeaderSubpage from "@/components/HeaderSubpage";
 
+// Note: Metadata cannot be exported from client components in Next.js
+// SEO optimization handled via Head component and schema markup
+
 import logo from "../../../assets/img/habitus/logo@2x.png";
 import img01 from "../../../assets/img/habitus/01@2x.png";
 import img02 from "../../../assets/img/habitus/02@2x.png";

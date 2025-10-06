@@ -2,8 +2,8 @@ import TeamplateHome from "@/components/TemplateHome";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Wellington Alexander - UX/UI Designer & Digital Experience Expert in Portugal",
-  description: "Wellington Alexander, an experienced UX/UI Designer based in Portimão, Portugal with 14+ years creating exceptional digital experiences. Specializing in user-centered design, UX research, digital strategy, and innovative front-end development for leading brands.",
+  title: "Welinton Fernandes - Senior Technical UI/UX Designer | 15+ Years Experience | Portugal",
+  description: "Welinton Fernandes, Senior Technical UI/UX Designer based in Portimão, Portugal. Specializing in WCAG accessibility, design systems, user research, and Figma expertise. 15+ years creating user-centered digital products for global brands including Apple, Samsung, and EIR.",
   keywords: [
     "Wellington Alexander", 
     "UX/UI Designer Portugal", 
