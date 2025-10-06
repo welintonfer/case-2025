@@ -21,36 +21,36 @@ const experienceYears = calculateExperienceYears();
 const experienceDescription = getExperienceDescription();
 
 export const metadata: Metadata = {
-  title: "Welinton Fernandes - Senior UX/UI Designer & Frontend Developer",
-  description: `Welinton Fernandes is a Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
-  keywords: "UX Designer, UI Designer, Frontend Developer, Web Design, User Experience, User Interface, React, Next.js, TypeScript, Responsive Design, Dublin Ireland",
+  title: "Welinton Fernandes - Senior Technical UI/UX Designer Portfolio",
+  description: `Senior Technical UI/UX Designer based in Portimão, Portugal, with over ${experienceYears} years of experience creating user-centred, accessible, and visually engaging digital products for global brands.`,
+  keywords: "UX Designer, UI Designer, Technical Designer, User Experience, User Interface, Figma, WCAG, Design Systems, Accessibility, Portimão Portugal",
   authors: [{ name: "Welinton Fernandes" }],
   creator: "Welinton Fernandes",
   publisher: "Welinton Fernandes",
-  metadataBase: new URL('https://welintonfer.com'),
+  metadataBase: new URL('https://www.creative-ton.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Welinton Fernandes - Senior UX/UI Designer & Frontend Developer",
-    description: `Welinton Fernandes is a Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
-    url: 'https://welintonfer.com',
-    siteName: 'Welinton Fernandes Portfolio',
+    title: "Welinton Fernandes - Senior Technical UI/UX Designer Portfolio",
+    description: `Senior Technical UI/UX Designer based in Portimão, Portugal, with over ${experienceYears} years of experience creating user-centred, accessible, and visually engaging digital products for global brands.`,
+    url: 'https://www.creative-ton.com',
+    siteName: 'Welinton Fernandes - Senior UX/UI Designer Portfolio',
     images: [
       {
         url: '/assets/seo/seo-homepage.png',
         width: 1200,
         height: 630,
-        alt: 'Welinton Fernandes - Senior UX/UI Designer & Frontend Developer',
+        alt: 'Welinton Fernandes - Senior Technical UI/UX Designer Portfolio',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_GB',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Welinton Fernandes - Senior UX/UI Designer & Frontend Developer",
-    description: `Welinton Fernandes is a Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
+    title: "Welinton Fernandes - Senior Technical UI/UX Designer Portfolio",
+    description: `Senior Technical UI/UX Designer based in Portimão, Portugal, with over ${experienceYears} years of experience creating user-centred, accessible, and visually engaging digital products for global brands.`,
     images: ['/assets/seo/seo-homepage.png'],
   },
   robots: {
@@ -72,68 +72,138 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Welinton Fernandes',
-    jobTitle: 'Senior UX/UI Designer & Frontend Developer',
-    description: `Senior UX/UI Designer and Frontend Developer with ${experienceDescription} of experience creating digital experiences. Specializing in user-centered design, responsive web development, and modern frontend technologies.`,
-    url: 'https://welintonfer.com',
-    sameAs: [
-      'https://www.linkedin.com/in/welintonfer',
-      'https://github.com/welintonfer',
-      'https://dribbble.com/welintonfer',
-      'https://behance.net/welintonfer'
-    ],
-    image: 'https://welintonfer.com/assets/seo/seo-homepage.png',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Dublin',
-      addressCountry: 'Ireland'
-    },
-    email: 'hello@welintonfer.com',
-    telephone: '+353-1-234-5678',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Freelance'
-    },
-    alumniOf: {
-      '@type': 'EducationalOrganization',
-      name: 'Design Institute'
-    },
-    knowsAbout: [
-      'UX Design',
-      'UI Design', 
-      'Frontend Development',
-      'React',
-      'Next.js',
-      'TypeScript',
-      'User Experience',
-      'Web Design',
-      'Responsive Design',
-      'JavaScript',
-      'CSS',
-      'HTML'
-    ],
-    hasOccupation: {
-      '@type': 'Occupation',
-      name: 'Senior UX/UI Designer & Frontend Developer',
-      occupationLocation: {
-        '@type': 'Place',
-        name: 'Dublin, Ireland'
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.creative-ton.com/#website",
+    "name": "Welinton Fernandes - Senior UX/UI Designer Portfolio",
+    "url": "https://www.creative-ton.com/",
+    "description": `Senior Technical UI/UX Designer based in Portimão, Portugal, with over ${experienceYears} years of experience creating user-centred, accessible, and visually engaging digital products for global brands.`,
+    "inLanguage": "en-GB",
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://www.creative-ton.com/#person",
+      "name": "Welinton Fernandes",
+      "alternateName": "Welinton Fernandes Design",
+      "jobTitle": "Senior Technical UI/UX Designer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Multivision.pt",
+        "url": "https://www.multivision.pt",
+        "description": "A leading technology and innovation company based in Portugal."
       },
-      skills: [
-        'UX Design',
-        'UI Design',
-        'Frontend Development', 
-        'React',
-        'Next.js',
-        'TypeScript',
-        'User Experience',
-        'Web Design',
-        'Responsive Design'
+      "image": "https://www.creative-ton.com/assets/seo/seo-homepage.png",
+      "url": "https://www.creative-ton.com/",
+      "sameAs": [
+        "https://www.linkedin.com/in/welinton-fernandes",
+        "https://github.com/wellington-alexander",
+        "https://www.behance.net/wellington-alexander"
       ],
-      experienceLevel: 'Senior',
-      yearsOfExperience: experienceYears
+      "award": [
+        `${experienceYears} Years Professional Experience`,
+        "Global Brand Portfolio including Apple, Samsung, and Eir"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Portimão",
+        "addressRegion": "Algarve",
+        "addressCountry": {
+          "@type": "Country",
+          "name": "PT"
+        }
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Senior Technical UI/UX Designer",
+        "description": "Specialised in Figma, WCAG accessibility, design systems, and UX strategy.",
+        "experienceRequirements": `${experienceYears} years`,
+        "skills": [
+          "User Experience Design",
+          "User Interface Design",
+          "User Research",
+          "Information Architecture",
+          "Prototyping",
+          "Design Systems",
+          "Accessibility (WCAG)",
+          "Visual Design"
+        ]
+      },
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "UX Design",
+          "description": "User experience research, testing, and information architecture."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "UI Design",
+          "description": "Visual interface and interaction design."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Figma",
+          "description": "Collaborative design and prototyping platform."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Design Systems",
+          "description": "Frameworks for consistent and scalable design implementation."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Accessibility Standards (WCAG)",
+          "description": "Web Content Accessibility Guidelines ensuring inclusive design."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Front-end Development",
+          "description": "HTML, CSS, JavaScript integration for design fidelity."
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Professional Inquiries",
+        "email": "portfolio.fernandes@gmail.com",
+        "availableLanguage": ["English", "Portuguese"],
+        "url": "https://www.creative-ton.com/#contact"
+      }
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "UX/UI Design Services",
+          "description": "Professional design and user experience services for digital products."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "User Research & Usability Testing",
+          "description": "Comprehensive user testing and product validation."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Design Systems & Prototyping",
+          "description": "Creation of scalable design systems and interactive prototypes in Figma."
+        }
+      }
+    ],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.creative-ton.com/search?q={search_term_string}"
+      },
+      "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+      }
     }
   };
 
