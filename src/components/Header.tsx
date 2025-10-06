@@ -107,9 +107,11 @@ export default function Header({
               Experience Designer currently based in Portugal.
             </h1>
             <p className="mt-8 max-w-6xl mx-auto text-base sm:text-base md:text-lg lg:text-xl xl:text-xl text-gray-600">
-              I craft engaging and innovative experiences that connect brands with their customers. Leveraging my
-              marketing background, I design solutions that seamlessly meet user needs while driving business
-              objectives.
+              I craft engaging and innovative experiences that connect brands with their customers. Through my{" "}
+              <Link href="/what-i-do" className="text-gray-900 hover:underline font-medium">comprehensive design process</Link>, 
+              I create solutions that seamlessly meet user needs while driving business objectives. Explore my{" "}
+              <Link href="/work" className="text-gray-900 hover:underline font-medium">portfolio of case studies</Link>{" "}
+              to see how I've helped global brands achieve their digital goals.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">

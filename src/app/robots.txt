@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Optimize crawl budget
+Disallow: /api/
+Disallow: /_next/
+Disallow: /manifest.webmanifest
+
+# Sitemap location
+Sitemap: https://www.creative-ton.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow important pages for better indexing
+Allow: /what-i-do
+Allow: /work
+Allow: /work/eir
+Allow: /work/europcar
+Allow: /work/habitushealth
+Allow: /work/helenturkington
+Allow: /work/lisney
+Allow: /work/caro
