@@ -165,34 +165,34 @@ export default function RootLayout({
         "email": "portfolio.fernandes@gmail.com",
         "availableLanguage": ["English", "Portuguese"],
         "url": "https://www.creative-ton.com/#contact"
-      }
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "UX/UI Design Services",
+            "description": "Professional design and user experience services for digital products."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "User Research & Usability Testing",
+            "description": "Comprehensive user testing and product validation."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Design Systems & Prototyping",
+            "description": "Creation of scalable design systems and interactive prototypes in Figma."
+          }
+        }
+      ]
     },
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "UX/UI Design Services",
-          "description": "Professional design and user experience services for digital products."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "User Research & Usability Testing",
-          "description": "Comprehensive user testing and product validation."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Design Systems & Prototyping",
-          "description": "Creation of scalable design systems and interactive prototypes in Figma."
-        }
-      }
-    ],
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
