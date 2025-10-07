@@ -1,6 +1,18 @@
 import TeamplateHome from "@/components/TemplateHome";
 import Image from "next/image";
 
+// Data de início da carreira
+const startDate = new Date(2010, 2, 8); // março é mês 2 (zero-based)
+const today = new Date();
+
+// Calcula anos completos
+const diffYears = today.getFullYear() - startDate.getFullYear();
+const hasHadAnniversary =
+  today.getMonth() > startDate.getMonth() ||
+  (today.getMonth() === startDate.getMonth() && today.getDate() >= startDate.getDate());
+
+const yearsOfExperience = hasHadAnniversary ? diffYears : diffYears - 1;
+
 export const metadata = {
   title: "Welinton Fernandes - Senior Technical UI/UX Designer | 15+ Years Experience | Portugal",
   description: "Welinton Fernandes, Senior Technical UI/UX Designer based in Portimão, Portugal. Specializing in WCAG accessibility, design systems, user research, and Figma expertise. 15+ years creating user-centered digital products for global brands including Apple, Samsung, and EIR.",
@@ -28,7 +40,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Wellington Alexander - Leading UX/UI Designer in Portugal",
-    description: "Discover Wellington Alexander's award-winning portfolio featuring 14+ years of UX/UI design excellence. From digital strategy to innovative user experiences - transforming brands through exceptional design.",
+    description: `Discover Wellington Alexander's award-winning portfolio featuring ${yearsOfExperience}+ years of UX/UI design excellence. From digital strategy to innovative user experiences - transforming brands through exceptional design.`,
     url: "https://www.creative-ton.com",
     type: "website",
     locale: "en_US",
@@ -45,7 +57,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wellington Alexander - Leading UX/UI Designer in Portugal",
-    description: "Award-winning UX/UI Designer with 14+ years of experience creating exceptional digital experiences. Based in Portugal, specializing in user research, design systems, and innovative interface design.",
+    description: `Award-winning UX/UI Designer with ${yearsOfExperience}+ years of experience creating exceptional digital experiences. Based in Portugal, specializing in user research, design systems, and innovative interface design.`,
     images: ["https://www.creative-ton.com/assets/seo/seo-homepage.png"],
   },
   alternates: {
