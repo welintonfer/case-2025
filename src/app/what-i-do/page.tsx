@@ -1,9 +1,24 @@
 import { Metadata } from "next";
 import WhatIDoPageClient from "@/components/WhatIDoPageClient";
 
+// Data de início da carreira
+  const startDate = new Date(2010, 2, 8); // março é mês 2 (zero-based)
+  const today = new Date();
+
+  // Calcula anos completos
+  const diffYears = today.getFullYear() - startDate.getFullYear();
+  const hasHadAnniversary =
+    today.getMonth() > startDate.getMonth() ||
+    (today.getMonth() === startDate.getMonth() && today.getDate() >= startDate.getDate());
+
+  const yearsOfExperience = hasHadAnniversary ? diffYears : diffYears - 1;
+
+  // Texto dinâmico
+  const description = `Learn about Wellington Alexander's systematic approach to UX/UI design. 5 comprehensive phases from understanding to testing, refined over ${yearsOfExperience}+ years of experience.`;
+
 export const metadata: Metadata = {
   title: "UX/UI Design Process & Services - Wellington Alexander",
-  description: "Discover Wellington Alexander's comprehensive UX/UI design process - from user research and wireframing to prototyping and testing. 14+ years of experience in user-centered design, information architecture, and digital strategy in Portugal.",
+  description: `Discover Wellington Alexander's comprehensive UX/UI design process - from user research and wireframing to prototyping and testing. ${yearsOfExperience}+ years of experience in user-centered design, information architecture, and digital strategy in Portugal.`,
   keywords: [
     "UX Design Process",
     "UI Design Services",
@@ -43,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Professional UX/UI Design Services - Wellington Alexander",
-    description: "Learn about Wellington Alexander's systematic approach to UX/UI design. 5 comprehensive phases from understanding to testing, refined over 14+ years of experience.",
+    description: description,
     images: ["https://www.creative-ton.com/assets/seo/seo-homepage.png"],
   },
   alternates: {
@@ -77,7 +92,7 @@ const whatIDoSchema = {
       "@type": "Service",
       "@id": "https://www.creative-ton.com/what-i-do#service",
       "name": "UX/UI Design Process & Services",
-      "description": "Comprehensive UX/UI design process from understanding to testing, refined over 14+ years of experience",
+      "description": `Comprehensive UX/UI design process from understanding to testing, refined over ${yearsOfExperience}+ years of experience`,
       "provider": {
         "@id": "https://www.creative-ton.com/#person"
       },
@@ -437,12 +452,12 @@ const whatIDoSchema = {
             "@type": "Offer",
             "@id": "https://www.creative-ton.com/what-i-do#cross-browser",
             "name": "Cross-Browser Testing",
-            "description": "Comprehensive cross-browser compatibility testing ensuring consistent user experience across all platforms with over 10+ years expertise",
+            "description": `Comprehensive cross-browser compatibility testing ensuring consistent user experience across all platforms with over ${yearsOfExperience}+ years expertise`,
             "itemOffered": {
               "@type": "Service",
               "name": "Cross-Browser Compatibility Testing",
               "serviceType": "Technical Testing",
-              "experience": "10+ years since 2010",
+              "experience": `${yearsOfExperience}+ years since 2010`,
               "workExample": "Multi-browser optimization and consistency validation"
             }
           },
