@@ -24,24 +24,20 @@ export default function ProductionGATest() {
               timestamp: new Date().toISOString()
             });
             
-            console.log("🚀 Production GA test events sent to G-3KXKWNJVLJ");
-            console.log("📊 Check: https://analytics.google.com/analytics/web/#/a218580109p301285383/reports/realtime");
+            // Eventos de teste enviados silenciosamente
             
-            // Envia eventos a cada 30 segundos para manter ativo
+            // Envia eventos a cada 60 segundos para manter ativo (reduzido)
             const interval = setInterval(() => {
               (window as any).gtag("event", "user_active", {
                 event_category: "engagement",
                 event_label: "Active User",
                 value: Math.floor(Date.now() / 1000)
               });
-              console.log("🔄 Keep-alive event sent to GA");
-            }, 30000);
+            }, 60000);
             
             // Para depois de 5 minutos
             setTimeout(() => clearInterval(interval), 300000);
             
-          } else {
-            console.error("❌ GA not loaded in production");
           }
         }, 3000);
       }

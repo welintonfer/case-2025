@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import ClientSideScript from "@/components/ClientSideScript";
 import ClientAnimatedCursor from "@/components/ClientAnimatedCursor";
-import GoogleAnalyticsDebug from "@/components/GoogleAnalyticsDebug";
 import ProductionGATest from "@/components/ProductionGATest";
 import { calculateExperienceYears, getExperienceDescription } from "@/lib/utils";
 
@@ -238,10 +237,7 @@ export default function RootLayout({
                   site_version: window.location.hostname.includes('creative-ton.com') ? 'production' : 'development',
                   domain: window.location.hostname
                 });
-                console.log('🚀 GA event sent to G-3KXKWNJVLJ from:', window.location.hostname);
               }, 1000);
-              
-              console.log('✅ Google Analytics G-3KXKWNJVLJ initialized for production');
             `,
           }}
         />
@@ -251,7 +247,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <GoogleAnalyticsDebug />
         <ProductionGATest />
         <ClientAnimatedCursor />
         {children}
