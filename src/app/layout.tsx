@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientSideScript from "@/components/ClientSideScript";
 import ClientAnimatedCursor from "@/components/ClientAnimatedCursor";
 import GoogleAnalyticsDebug from "@/components/GoogleAnalyticsDebug";
+import ProductionGATest from "@/components/ProductionGATest";
 import { calculateExperienceYears, getExperienceDescription } from "@/lib/utils";
 
 const geistSans = localFont({
@@ -214,7 +215,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics - Simplified Implementation */}
+        {/* Google Analytics - Production Ready */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXKWNJVLJ"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -222,8 +223,25 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-3KXKWNJVLJ');
-              console.log('✅ Google Analytics G-3KXKWNJVLJ initialized');
+              gtag('config', 'G-3KXKWNJVLJ', {
+                send_page_view: true,
+                page_title: document.title,
+                page_location: window.location.href,
+                custom_map: {'custom_parameter_1': 'dimension1'}
+              });
+              
+              // Força envio de page_view após 1 segundo
+              setTimeout(function() {
+                gtag('event', 'page_view', {
+                  page_title: document.title,
+                  page_location: window.location.href,
+                  site_version: window.location.hostname.includes('creative-ton.com') ? 'production' : 'development',
+                  domain: window.location.hostname
+                });
+                console.log('🚀 GA event sent to G-3KXKWNJVLJ from:', window.location.hostname);
+              }, 1000);
+              
+              console.log('✅ Google Analytics G-3KXKWNJVLJ initialized for production');
             `,
           }}
         />
@@ -234,6 +252,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalyticsDebug />
+        <ProductionGATest />
         <ClientAnimatedCursor />
         {children}
       </body>

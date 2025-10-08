@@ -47,8 +47,32 @@ export default function GoogleAnalyticsDebug() {
     };
   }, []);
 
-  // Só mostra em desenvolvimento
-  if (process.env.NODE_ENV !== 'development') {
+  // Mostra sempre, mas com informações diferentes para produção
+  const isProduction = process.env.NODE_ENV === 'production';
+  
+  // Em produção, só mostra se houver problemas ou se for solicitado
+  if (isProduction && gaStatus.includes('✅') && eventCount === 0) {
+    return (
+      <div style={{
+        position: 'fixed',
+        top: '10px',
+        right: '10px',
+        background: 'rgba(0,128,0,0.8)',
+        color: 'white',
+        padding: '5px 8px',
+        borderRadius: '5px',
+        fontSize: '10px',
+        zIndex: 9999,
+        cursor: 'pointer'
+      }}
+      onClick={() => setEventCount(-1)} // Flag para mostrar painel completo
+      >
+        GA ✅
+      </div>
+    );
+  }
+  
+  if (isProduction && eventCount === 0) {
     return null;
   }
 
