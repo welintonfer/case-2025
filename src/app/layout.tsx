@@ -214,7 +214,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics */}
+        {/* Google Analytics - Simplified Implementation */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXKWNJVLJ"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -222,11 +222,8 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-3KXKWNJVLJ', {
-                page_title: document.title,
-                page_location: window.location.href
-              });
-              console.log('GA loaded directly in head');
+              gtag('config', 'G-3KXKWNJVLJ');
+              console.log('✅ Google Analytics G-3KXKWNJVLJ initialized');
             `,
           }}
         />
@@ -239,7 +236,6 @@ export default function RootLayout({
         <GoogleAnalyticsDebug />
         <ClientAnimatedCursor />
         {children}
-        <ClientSideScript />
       </body>
     </html>
   );
