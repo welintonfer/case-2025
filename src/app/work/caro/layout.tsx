@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 // Metadados SEO específicos para CARO Case Study
 export const metadata: Metadata = {
-  title: "CARO Climate Action UX/UI Design Case Study - Wellington Alexander",
+  title: "CARO Climate Action UX/UI Design Case Study - Welinton Fernandes",
   description: "Detailed case study of CARO Climate Action Regional Offices website design focusing on accessibility, WCAG compliance, and environmental awareness through user-centered design.",
   keywords: [
     "CARO Case Study",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Environmental Web Design",
     "Jakob Nielsen Principles",
     "User Experience Design",
-    "Wellington Alexander Portfolio"
+    "Welinton Fernandes Portfolio"
   ],
   openGraph: {
     title: "CARO Climate Action UX/UI Design Case Study",
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
         url: "https://www.creative-ton.com/assets/img/caro/caro-presentation@2x.png",
         width: 1200,
         height: 630,
-        alt: "CARO Climate Action website design case study by Wellington Alexander"
+        alt: "CARO Climate Action website design case study by Welinton Fernandes"
       }
     ],
     locale: "en_US",
-    siteName: "Wellington Alexander - UX/UI Designer Portfolio"
+    siteName: "Welinton Fernandes - UX/UI Designer Portfolio"
   },
   twitter: {
     card: "summary_large_image",

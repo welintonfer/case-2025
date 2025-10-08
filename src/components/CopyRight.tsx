@@ -4,8 +4,8 @@ export default function CopyRight() {
       <div className="container mx-auto flex flex-col justify-center items-center">
         <div className="flex w-full max-w-full  flex-col justify-center gap-6 py-4 px-4">
           <p className="text-center text-gray-950">
-            <span className="font-semibold ">© Wellington Alexander – UX Designer. All rights reserved.</span> <br />
-            <span className="pt-3">📱 +353 89 985 6728 | 🌍 Crafted with purpose and creativity by Wellington Alexander</span>
+            <span className="font-semibold ">© Welinton Fernandes – UX Designer. All rights reserved.</span> <br />
+            <span className="pt-3">📱 +353 89 985 6728 | 🌍 Crafted with purpose and creativity by Welinton Fernandes</span>
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 // Metadados SEO específicos para Lisney Case Study
 export const metadata: Metadata = {
-  title: "Lisney Real Estate UX/UI Design Case Study - Wellington Alexander",
+  title: "Lisney Real Estate UX/UI Design Case Study - Welinton Fernandes",
   description: "Comprehensive case study of Lisney real estate platform design focusing on property search optimization, user journey improvements, and enhanced customer experience.",
   keywords: [
     "Lisney Case Study",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Property Listing Design",
     "Customer Journey UX",
     "User Experience Design",
-    "Wellington Alexander Portfolio"
+    "Welinton Fernandes Portfolio"
   ],
   openGraph: {
     title: "Lisney Real Estate UX/UI Design Case Study",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
         url: "https://www.creative-ton.com/assets/img/lisney/lisney-cover.png",
         width: 1200,
         height: 630,
-        alt: "Lisney real estate UX/UI design case study by Wellington Alexander"
+        alt: "Lisney real estate UX/UI design case study by Welinton Fernandes"
       }
     ],
     locale: "en_US",
-    siteName: "Wellington Alexander - UX/UI Designer Portfolio"
+    siteName: "Welinton Fernandes - UX/UI Designer Portfolio"
   },
   twitter: {
     card: "summary_large_image",

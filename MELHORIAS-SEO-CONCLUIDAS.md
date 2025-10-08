@@ -15,10 +15,10 @@
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.creative-ton.com'),
   title: {
-    default: "Wellington Alexander - UX/UI Designer & Digital Experience Expert",
-    template: "%s | Wellington Alexander - UX/UI Designer"
+    default: "Welinton Fernandes - UX/UI Designer & Digital Experience Expert",
+    template: "%s | Welinton Fernandes - UX/UI Designer"
   },
-  description: "Wellington Alexander, a UX/UI Designer with over 14 years of experience in Portugal...",
+  description: "Welinton Fernandes, a UX/UI Designer with over 14 years of experience in Portugal...",
   // + 50+ metadados otimizados
 }
 ```
@@ -53,8 +53,8 @@ https://www.creative-ton.com
 ### **Agora (Otimizado):**
 ```
 Google Search Result:
-Wellington Alexander - UX/UI Designer & Digital Experience Expert in Portugal
-Wellington Alexander, an experienced UX/UI Designer based in Portimão, Portugal with 14+ years creating exceptional digital experiences...
+Welinton Fernandes - UX/UI Designer & Digital Experience Expert in Portugal
+Welinton Fernandes, an experienced UX/UI Designer based in Portimão, Portugal with 14+ years creating exceptional digital experiences...
 https://www.creative-ton.com
 ```
 
@@ -86,12 +86,12 @@ npm run start
 ## 🎯 **IMPACTO NO SEO:**
 
 ### **Título e Descrição Agora Otimizados:**
-- **Homepage**: "Wellington Alexander - UX/UI Designer & Digital Experience Expert in Portugal"
-- **Portfolio**: "UX/UI Design Portfolio & Case Studies - Wellington Alexander"  
-- **Serviços**: "UX/UI Design Process & Services - Wellington Alexander"
+- **Homepage**: "Welinton Fernandes - UX/UI Designer & Digital Experience Expert in Portugal"
+- **Portfolio**: "UX/UI Design Portfolio & Case Studies - Welinton Fernandes"  
+- **Serviços**: "UX/UI Design Process & Services - Welinton Fernandes"
 
 ### **Keywords Estratégicas:**
-- Wellington Alexander
+- Welinton Fernandes
 - UX/UI Designer Portugal
 - Digital Experience Designer Portimão
 - User Research Expert

@@ -14,8 +14,8 @@ const yearsOfExperience = hasHadAnniversary ? diffYears : diffYears - 1;
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Wellington Alexander - UX/UI Designer Portfolio',
-    short_name: 'Wellington Alexander',
+    name: 'Welinton Fernandes - UX/UI Designer Portfolio',
+    short_name: 'Welinton Fernandes',
     description: `Professional UX/UI Designer with ${yearsOfExperience}+ years of experience creating exceptional digital experiences in Portugal.`,
     start_url: '/',
     display: 'standalone',

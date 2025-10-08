@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import WorkPageClient from "@/components/WorkPageClient";
 
 export const metadata: Metadata = {
-  title: "UX/UI Design Portfolio & Case Studies - Wellington Alexander",
-  description: "Explore Wellington Alexander's comprehensive UX/UI design portfolio featuring detailed case studies from leading brands including Eir, Europcar, Habitus Health, and more.",
+  title: "UX/UI Design Portfolio & Case Studies - Welinton Fernandes",
+  description: "Explore Welinton Fernandes's comprehensive UX/UI design portfolio featuring detailed case studies from leading brands including Eir, Europcar, Habitus Health, and more.",
   alternates: {
     canonical: "https://www.creative-ton.com/work",
   },
@@ -34,7 +34,7 @@ const workPortfolioSchema = {
     {
       "@type": "ItemList",
       "@id": "https://www.creative-ton.com/work#portfolio",
-      "name": "Wellington Alexander Design Portfolio",
+      "name": "Welinton Fernandes Design Portfolio",
       "description": "Comprehensive portfolio showcasing UX/UI design projects for leading brands and companies",
       "numberOfItems": 6,
       "itemListElement": [

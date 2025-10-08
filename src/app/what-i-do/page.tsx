@@ -14,11 +14,11 @@ import WhatIDoPageClient from "@/components/WhatIDoPageClient";
   const yearsOfExperience = hasHadAnniversary ? diffYears : diffYears - 1;
 
   // Texto dinâmico
-  const description = `Learn about Wellington Alexander's systematic approach to UX/UI design. 5 comprehensive phases from understanding to testing, refined over ${yearsOfExperience}+ years of experience.`;
+  const description = `Learn about Welinton Fernandes's systematic approach to UX/UI design. 5 comprehensive phases from understanding to testing, refined over ${yearsOfExperience}+ years of experience.`;
 
 export const metadata: Metadata = {
-  title: "UX/UI Design Process & Services - Wellington Alexander",
-  description: `Discover Wellington Alexander's comprehensive UX/UI design process - from user research and wireframing to prototyping and testing. ${yearsOfExperience}+ years of experience in user-centered design, information architecture, and digital strategy in Portugal.`,
+  title: "UX/UI Design Process & Services - Welinton Fernandes",
+  description: `Discover Welinton Fernandes's comprehensive UX/UI design process - from user research and wireframing to prototyping and testing. ${yearsOfExperience}+ years of experience in user-centered design, information architecture, and digital strategy in Portugal.`,
   keywords: [
     "UX Design Process",
     "UI Design Services",
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     "User Journey Mapping",
     "Cross-Browser Testing",
     "UX Monitoring",
-    "Wellington Alexander Services",
+    "Welinton Fernandes Services",
     "Portugal UX Designer"
   ],
   openGraph: {
-    title: "UX/UI Design Process & Services - Wellington Alexander",
-    description: "Explore Wellington Alexander's proven UX/UI design methodology. From initial briefing to final monitoring - discover the 5-phase process that creates exceptional digital experiences.",
+    title: "UX/UI Design Process & Services - Welinton Fernandes",
+    description: "Explore Welinton Fernandes's proven UX/UI design methodology. From initial briefing to final monitoring - discover the 5-phase process that creates exceptional digital experiences.",
     url: "https://www.creative-ton.com/what-i-do",
     type: "website",
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: "https://www.creative-ton.com/assets/seo/seo-homepage.png",
         width: 1200,
         height: 630,
-        alt: "Wellington Alexander UX/UI Design Process and Services",
+        alt: "Welinton Fernandes UX/UI Design Process and Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional UX/UI Design Services - Wellington Alexander",
+    title: "Professional UX/UI Design Services - Welinton Fernandes",
     description: description,
     images: ["https://www.creative-ton.com/assets/seo/seo-homepage.png"],
   },
@@ -106,7 +106,7 @@ const whatIDoSchema = {
       "@type": "HowTo",
       "@id": "https://www.creative-ton.com/what-i-do#process",
       "name": "5-Phase UX/UI Design Methodology",
-      "description": "Wellington Alexander's comprehensive methodology for creating exceptional digital experiences",
+      "description": "Welinton Fernandes's comprehensive methodology for creating exceptional digital experiences",
       "totalTime": "PT8W",
       "estimatedCost": {
         "@type": "MonetaryAmount",

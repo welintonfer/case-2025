@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EIR Case Study - Wellington Alexander",
-  description: "Detailed case study of the EIR project by Wellington Alexander, showcasing UX/UI design process and solutions for telecommunications.",
+  title: "EIR Case Study - Welinton Fernandes",
+  description: "Detailed case study of the EIR project by Welinton Fernandes, showcasing UX/UI design process and solutions for telecommunications.",
 };
 
 export default function Page() {

@@ -1,4 +1,4 @@
-# 🚀 Melhorias de SEO Implementadas - Wellington Alexander Portfolio
+# 🚀 Melhorias de SEO Implementadas - Welinton Fernandes Portfolio
 
 ## ✅ Problemas Corrigidos
 
@@ -54,17 +54,17 @@ NEXT_PUBLIC_GA_TRACKING_ID=G-XXXXXXXXXX
 ## 🎯 Metadados por Página
 
 ### Homepage
-- **Título**: "Wellington Alexander - UX/UI Designer & Digital Experience Expert in Portugal"
+- **Título**: "Welinton Fernandes - UX/UI Designer & Digital Experience Expert in Portugal"
 - **Foco**: Localização geográfica + expertise
 - **Keywords**: Portugal, Portimão, 14+ anos experiência
 
 ### Portfolio (/work)
-- **Título**: "UX/UI Design Portfolio & Case Studies - Wellington Alexander"
+- **Título**: "UX/UI Design Portfolio & Case Studies - Welinton Fernandes"
 - **Foco**: Projetos e estudos de caso
 - **Keywords**: Portfolio, case studies, projetos
 
 ### Serviços (/what-i-do)
-- **Título**: "UX/UI Design Process & Services - Wellington Alexander"
+- **Título**: "UX/UI Design Process & Services - Welinton Fernandes"
 - **Foco**: Processo e metodologia
 - **Keywords**: Processo design, serviços UX
 

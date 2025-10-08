@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 // Metadados SEO específicos para EIR Case Study
 export const metadata: Metadata = {
-  title: "EIR Telecommunications UX/UI Design Case Study - Wellington Alexander",
+  title: "EIR Telecommunications UX/UI Design Case Study - Welinton Fernandes",
   description: "Comprehensive case study documenting the UX/UI design process for EIR telecommunications, focusing on mobile app optimization, user research, and interface design improvements.",
   keywords: [
     "EIR Case Study",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Interface Design",
     "Design Thinking",
     "User Experience Ireland",
-    "Wellington Alexander Portfolio"
+    "Welinton Fernandes Portfolio"
   ],
   openGraph: {
     title: "EIR Telecommunications UX/UI Design Case Study",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
         url: "https://www.creative-ton.com/assets/img/eir/cover-casestudy-eir.png",
         width: 1200,
         height: 630,
-        alt: "EIR telecommunications UX/UI design case study by Wellington Alexander"
+        alt: "EIR telecommunications UX/UI design case study by Welinton Fernandes"
       }
     ],
     locale: "en_US",
-    siteName: "Wellington Alexander - UX/UI Designer Portfolio"
+    siteName: "Welinton Fernandes - UX/UI Designer Portfolio"
   },
   twitter: {
     card: "summary_large_image",

@@ -17,7 +17,7 @@ export const metadata = {
   title: "Welinton Fernandes - Senior Technical UI/UX Designer | 15+ Years Experience | Portugal",
   description: "Welinton Fernandes, Senior Technical UI/UX Designer based in Portimão, Portugal. Specializing in WCAG accessibility, design systems, user research, and Figma expertise. 15+ years creating user-centered digital products for global brands including Apple, Samsung, and EIR.",
   keywords: [
-    "Wellington Alexander", 
+    "Welinton Fernandes", 
     "UX/UI Designer Portugal", 
     "Digital Experience Designer Portimão",
     "User Research Expert", 
@@ -39,24 +39,24 @@ export const metadata = {
     "Brand Design Portugal"
   ],
   openGraph: {
-    title: "Wellington Alexander - Leading UX/UI Designer in Portugal",
-    description: `Discover Wellington Alexander's award-winning portfolio featuring ${yearsOfExperience}+ years of UX/UI design excellence. From digital strategy to innovative user experiences - transforming brands through exceptional design.`,
+    title: "Welinton Fernandes - Leading UX/UI Designer in Portugal",
+    description: `Discover Welinton Fernandes's award-winning portfolio featuring ${yearsOfExperience}+ years of UX/UI design excellence. From digital strategy to innovative user experiences - transforming brands through exceptional design.`,
     url: "https://www.creative-ton.com",
     type: "website",
     locale: "en_US",
-    siteName: "Wellington Alexander - UX/UI Designer Portfolio",
+    siteName: "Welinton Fernandes - UX/UI Designer Portfolio",
     images: [
       {
         url: "https://www.creative-ton.com/assets/seo/seo-homepage.png",  
         width: 1200,
         height: 630,
-        alt: "Wellington Alexander - UX/UI Designer Portfolio showcasing innovative digital experiences and user-centered design projects",
+        alt: "Welinton Fernandes - UX/UI Designer Portfolio showcasing innovative digital experiences and user-centered design projects",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wellington Alexander - Leading UX/UI Designer in Portugal",
+    title: "Welinton Fernandes - Leading UX/UI Designer in Portugal",
     description: `Award-winning UX/UI Designer with ${yearsOfExperience}+ years of experience creating exceptional digital experiences. Based in Portugal, specializing in user research, design systems, and innovative interface design.`,
     images: ["https://www.creative-ton.com/assets/seo/seo-homepage.png"],
   },

@@ -116,7 +116,7 @@ export default function Header({
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
-                  onClick={() => window.open('/assets/resume/wellington-alexander-resume.pdf', '_blank')}
+                  onClick={() => window.open('/assets/resume/welinton-fernandes-resume.pdf', '_blank')}
                   className="inline-flex items-center justify-center px-6 py-4 rounded-full bg-gray-950 text-white hover:bg-gray-800 font-semibold hoverable"
                   style={{ pointerEvents: 'auto', zIndex: 9999 }}
                 >

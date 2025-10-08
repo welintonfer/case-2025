@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Page Not Found - Wellington Alexander',
-  description: 'The page you are looking for could not be found. Explore Wellington Alexander\'s UX/UI design portfolio and services.',
+  title: 'Page Not Found - Welinton Fernandes',
+  description: 'The page you are looking for could not be found. Explore Welinton Fernandes\'s UX/UI design portfolio and services.',
   robots: {
     index: false,
     follow: true,
