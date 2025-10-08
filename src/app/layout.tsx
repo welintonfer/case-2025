@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import ClientSideScript from "@/components/ClientSideScript";
 import ClientAnimatedCursor from "@/components/ClientAnimatedCursor";
+import GoogleAnalyticsDebug from "@/components/GoogleAnalyticsDebug";
 import { calculateExperienceYears, getExperienceDescription } from "@/lib/utils";
 
 const geistSans = localFont({
@@ -213,12 +214,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KXKWNJVLJ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-3KXKWNJVLJ', {
+                page_title: document.title,
+                page_location: window.location.href
+              });
+              console.log('GA loaded directly in head');
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <GoogleAnalyticsDebug />
         <ClientAnimatedCursor />
         {children}
         <ClientSideScript />

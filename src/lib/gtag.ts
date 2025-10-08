@@ -9,9 +9,12 @@ export const pageview = (url: string) => {
     // Declara `gtag` dinamicamente para o TypeScript
     const gtag = (window as any).gtag;
     if (typeof gtag === "function") {
+      console.log('GA Pageview:', url);
       gtag("config", GA_TRACKING_ID, {
         page_path: url,
       });
+    } else {
+      console.warn('gtag function not available');
     }
   }
 };
