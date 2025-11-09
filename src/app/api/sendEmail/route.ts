@@ -24,7 +24,7 @@ const formatSelectedOptions = (helpOptions: HelpOptionsPayload | undefined) => {
 
 const createTransporter = () => {
   const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASSWORD;
+  const pass = process.env.EMAIL_PASSWORD || process.env.EMAIL_PASS;
 
   if (!user || !pass) {
     throw new Error("EMAIL_USER and EMAIL_PASSWORD environment variables are not configured.");
@@ -32,10 +32,16 @@ const createTransporter = () => {
 
   return nodemailer.createTransport({
     service: process.env.EMAIL_SERVICE || "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
     auth: {
       user,
       pass,
     },
+    tls: {
+      rejectUnauthorized: false
+    }
   });
 };
 
