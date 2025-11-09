@@ -76,6 +76,7 @@ export async function POST(request: NextRequest) {
 
     const formattedOptions = formatSelectedOptions(helpOptions);
 
+    // Email para você (notificação de nova mensagem)
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: contactEmail,
@@ -87,6 +88,40 @@ export async function POST(request: NextRequest) {
         <p><strong>Help Needed:</strong> ${formattedOptions}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
+      `,
+    });
+
+    // Email automático de agradecimento para o remetente
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Thanks for getting in touch! 🎨",
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #2c3e50;">Thanks for getting in touch! 🎨</h2>
+          
+          <p>Hi <strong>${name}</strong>,</p>
+          
+          <p>Thanks so much for reaching out and for visiting my portfolio at <a href="https://creative-ton.com" style="color: #3498db; text-decoration: none;">creative-ton.com</a>. I truly appreciate your message!</p>
+          
+          <p>I'm currently busy working on some exciting projects, but I'll get back to you as soon as I have the opportunity to review your email properly.</p>
+          
+          <p>In the meantime, feel free to explore my latest design work and updates on the website.</p>
+          
+          <p style="margin-top: 30px;">Best wishes,</p>
+          
+          <div style="border-left: 4px solid #3498db; padding-left: 20px; margin: 20px 0;">
+            <p style="margin: 0; font-weight: bold;">Welinton Fernandes</p>
+            <p style="margin: 5px 0; color: #7f8c8d;">Product & Visual Designer</p>
+            <p style="margin: 0;"><a href="https://creative-ton.com" style="color: #3498db; text-decoration: none;">creative-ton.com</a></p>
+          </div>
+          
+          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+          
+          <p style="font-size: 12px; color: #95a5a6;">
+            This is an automated response. Please do not reply to this email.
+          </p>
+        </div>
       `,
     });
 
