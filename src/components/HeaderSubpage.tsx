@@ -39,13 +39,16 @@ export default function HeaderSubpage({
 
   return (
     <header
-      className="relative m-3 flex flex-col justify-center overflow-hidden isolate rounded-[2rem] bg-white border-solid border-4 border-gray-900"
+      className="header-container relative m-3 flex flex-col justify-center overflow-hidden isolate rounded-[2rem] bg-white border-solid border-4 border-gray-900"
       suppressHydrationWarning // Suprime avisos de hidratação
     >
-      <div className="absolute inset-2 -z-10">
-        <div className="bg-1"></div>
-        <div className="bg-2"></div>
-        <div className="bg-3"></div>
+      {/* Container adicional para iOS fix */}
+      <div className="header-animation-container absolute inset-0 rounded-[2rem] overflow-hidden">
+        <div className="absolute inset-2 -z-10">
+          <div className="bg-1"></div>
+          <div className="bg-2"></div>
+          <div className="bg-3"></div>
+        </div>
       </div>
 
       <div className="w-full px-6 lg:px-8">
