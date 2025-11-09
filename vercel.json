@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "src/app/api/sendEmail/route.ts": {
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "EMAIL_USER": "portfolio.fernandes@gmail.com",
+    "CONTACT_EMAIL": "portfolio.fernandes@gmail.com"
+  }
+}

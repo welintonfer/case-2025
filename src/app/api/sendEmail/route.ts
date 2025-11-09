@@ -64,6 +64,11 @@ export async function POST(request: NextRequest) {
     const contactEmail = process.env.CONTACT_EMAIL;
 
     if (!contactEmail) {
+      console.error("Environment variables check:", {
+        EMAIL_USER: !!process.env.EMAIL_USER,
+        EMAIL_PASSWORD: !!process.env.EMAIL_PASSWORD,
+        CONTACT_EMAIL: !!process.env.CONTACT_EMAIL
+      });
       throw new Error("CONTACT_EMAIL environment variable is not configured.");
     }
 
