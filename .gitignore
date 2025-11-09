@@ -37,3 +37,4 @@ jest-html-reporters-*
 # Outros arquivos de cache e config do sistema operacional
 Thumbs.db
 .idea/
+.vercel
