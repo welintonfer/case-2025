@@ -82,7 +82,7 @@ export default function ContactForm() {
 
       if (response.ok) {
         setStatusMessage({
-          text: "Mensagem enviada com sucesso!",
+          text: "Message sent successfully! I will get back to you soon.",
           type: "success",
         });
         setFormData(getInitialFormData());
