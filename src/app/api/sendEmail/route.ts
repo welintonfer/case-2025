@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: contactEmail,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `CREATIVE-TON | New Contact Form Submission from ${name}`,
       html: `
         <h3>New Contact Form Submission</h3>
         <p><strong>Name:</strong> ${name}</p>
