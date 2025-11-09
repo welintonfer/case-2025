@@ -2,19 +2,52 @@
 
 import { useState } from "react";
 
+const HELP_OPTIONS = [
+  { key: "uxDesign", label: "UX Design" },
+  { key: "digitalStrategy", label: "Digital Strategy" },
+  { key: "research", label: "Research" },
+  { key: "uxAudit", label: "UX Audit" },
+  { key: "marketing", label: "Marketing" },
+  { key: "coffee", label: "Coffee!" },
+] as const;
+
+type HelpOptionKey = (typeof HELP_OPTIONS)[number]["key"];
+
+type HelpOptions = Record<HelpOptionKey, boolean>;
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+  helpOptions: HelpOptions;
+};
+
+type FormFieldKey = "name" | "email" | "message";
+
+type StatusMessage = {
+  text: string;
+  type: "success" | "error" | "";
+};
+
+const getInitialHelpOptions = (): HelpOptions =>
+  HELP_OPTIONS.reduce((acc, option) => {
+    acc[option.key] = false;
+    return acc;
+  }, {} as HelpOptions);
+
+const getInitialFormData = (): FormData => ({
+  name: "",
+  email: "",
+  message: "",
+  helpOptions: getInitialHelpOptions(),
+});
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    helpOptions: {
-      uxDesign: false,
-      digitalStrategy: false,
-      research: false,
-      uxAudit: false,
-      marketing: false,
-      coffee: false,
-    },
+  const [formData, setFormData] = useState<FormData>(getInitialFormData);
+  const [isLoading, setIsLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState<StatusMessage>({
+    text: "",
+    type: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,44 +57,51 @@ export default function ContactForm() {
       const { checked } = e.target;
       setFormData((prev) => ({
         ...prev,
-        helpOptions: { ...prev.helpOptions, [name]: checked },
+        helpOptions: {
+          ...prev.helpOptions,
+          [name as HelpOptionKey]: checked,
+        },
       }));
     } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
+      const fieldName = name as FormFieldKey;
+      setFormData((prev) => ({ ...prev, [fieldName]: value }));
     }
   };
 
   // Envia os dados do formulário para a rota de API
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setStatusMessage({ text: "", type: "" });
     try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log('E-mail enviado com sucesso!');
-        // Limpa o formulário após o envio bem-sucedido
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-          helpOptions: {
-            uxDesign: false,
-            digitalStrategy: false,
-            research: false,
-            uxAudit: false,
-            marketing: false,
-            coffee: false,
-          },
+        setStatusMessage({
+          text: "Mensagem enviada com sucesso!",
+          type: "success",
         });
+        setFormData(getInitialFormData());
       } else {
-        console.error('Erro ao enviar e-mail.');
+        const errorData = await response.json().catch(() => null);
+        setStatusMessage({
+          text:
+            (errorData && errorData.message) ||
+            "Erro ao enviar a mensagem. Tente novamente.",
+          type: "error",
+        });
       }
     } catch (error) {
-      console.error('Erro:', error);
+      setStatusMessage({
+        text: "Erro de rede. Por favor, tente novamente.",
+        type: "error",
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -119,32 +159,43 @@ export default function ContactForm() {
           <fieldset className="w-full px-6">
             <legend className="isolate-color font-bold mb-2">How Can I Help?</legend>
             <div className="grid grid-cols-2 gap-4">
-              {["UX Design", "Digital Strategy", "Research", "UX Audit", "Marketing", "Coffee!"].map(
-                (label, index) => {
-                  const name = label.toLowerCase().replace(/\s+/g, "");
-                  return (
-                    <label key={index} className="isolate-color dark:text-gray-100 flex items-center gap-2 transition-colors duration-200">
-                      <input
-                        type="checkbox"
-                        name={name}
-                        checked={formData.helpOptions[name as keyof typeof formData.helpOptions]}
-                        onChange={handleChange}
-                        className="w-4 h-4 border-solid border-gray-900 theme__bg-floral-white dark:bg-gray-800 transition-colors duration-200"
-                      />
-                      <span>{label}</span>
-                    </label>
-                  );
-                }
-              )}
+              {HELP_OPTIONS.map(({ key, label }) => (
+                <label
+                  key={key}
+                  className="isolate-color dark:text-gray-100 flex items-center gap-2 transition-colors duration-200"
+                >
+                  <input
+                    type="checkbox"
+                    name={key}
+                    checked={formData.helpOptions[key]}
+                    onChange={handleChange}
+                    className="w-4 h-4 border-solid border-gray-900 theme__bg-floral-white dark:bg-gray-800 transition-colors duration-200"
+                  />
+                  <span>{label}</span>
+                </label>
+              ))}
             </div>
           </fieldset>
+
+          {statusMessage.text && (
+            <div
+              className={`px-4 py-3 rounded-lg border ${
+                statusMessage.type === "success"
+                  ? "bg-green-100 text-green-800 border-green-200"
+                  : "bg-red-100 text-red-800 border-red-200"
+              }`}
+            >
+              {statusMessage.text}
+            </div>
+          )}
 
           <div className="flex justify-center">
             <button
               type="submit"
-              className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-full bg-gray-950 text-white hover:bg-gray-800 font-semibold hoverable transition-colors duration-200"
+              disabled={isLoading}
+              className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-full bg-gray-950 text-white hover:bg-gray-800 font-semibold hoverable transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Make it happen!
+              {isLoading ? "Enviando..." : "Make it happen!"}
             </button>
           </div>
         </form>

@@ -43,7 +43,7 @@ export default function HeaderSubpage({
       suppressHydrationWarning // Suprime avisos de hidratação
     >
       {/* Container adicional para iOS fix */}
-      <div className="header-animation-container absolute inset-0 rounded-[2rem] overflow-hidden">
+      <div className="header-animation-container absolute inset-0 rounded-[2rem] overflow-hidden pointer-events-none">
         <div className="absolute inset-2 -z-10">
           <div className="bg-1"></div>
           <div className="bg-2"></div>
@@ -55,18 +55,18 @@ export default function HeaderSubpage({
         <div className="mx-auto max-w-2xl lg:max-w-full">
           <div className="pt-12 sm:pt-4 flex justify-between items-center">
             
-            <div className="flex flex-col">
+            <div className="flex flex-col relative z-10" style={{ pointerEvents: 'auto' }}>
               <Link href="/" className="hover:scale-105 transition-transform duration-200">
                 <span className="isolate-color text-xl font-bold">Welinton Fernandes</span> <br />
                 <span className="text-sm isolate-color">Portimão, Portugal</span>
               </Link>
             </div>
 
-            <button className="lg:hidden isolate-color transition-colors duration-200 hover:opacity-70 active:scale-95" onClick={toggleMenu} aria-label="Toggle Menu">
+            <button className="lg:hidden isolate-color transition-colors duration-200 hover:opacity-70 active:scale-95 relative z-10" onClick={toggleMenu} aria-label="Toggle Menu" style={{ pointerEvents: 'auto' }}>
               {isOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
             </button>
 
-            <nav className="hidden lg:flex space-x-8 isolate-color">
+            <nav className="hidden lg:flex space-x-8 isolate-color relative z-10" style={{ pointerEvents: 'auto' }}>
               <Link href="/" className="hover:underline font-medium transition-colors duration-200">
                 Home
               </Link>
@@ -78,7 +78,7 @@ export default function HeaderSubpage({
               </Link>
             </nav>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 relative z-10" style={{ pointerEvents: 'auto' }}>
               <button onClick={toggleDarkMode} className="p-2 rounded-full bg-transparent isolate-color">
                 {isLightMode ? <IconSun size={24} /> : <IconMoon size={24} />}
               </button>
