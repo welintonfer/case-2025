@@ -11,9 +11,10 @@ export default function AnimeDemo() {
     if (!boxRef.current) return;
 
     animate(boxRef.current, {
-      from: { translateX: 0, rotate: 0, scale: 1 },
-      to: { translateX: 180, rotate: 360, scale: 1.2 },
-      ease: "easeInOutSine",
+      translateX: [0, 180],
+      rotate: [0, 360],
+      scale: [1, 1.2],
+      easing: "easeInOutSine",
       direction: "alternate",
       duration: 1200,
       loop: true,
@@ -21,11 +22,11 @@ export default function AnimeDemo() {
 
     if (dotsRef.current.length) {
       animate(dotsRef.current, {
-        from: { opacity: 0, translateY: 8 },
-        to: { opacity: 1, translateY: 0 },
+        opacity: [0, 1],
+        translateY: [8, 0],
         delay: stagger(80),
         duration: 400,
-        ease: "easeOutQuad",
+        easing: "easeOutQuad",
       });
     }
   }, []);
