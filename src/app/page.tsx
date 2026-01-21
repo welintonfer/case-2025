@@ -1,4 +1,4 @@
-import TeamplateHome from "@/components/TemplateHome";
+import TemplateHome from "@/components/TemplateHome";
 import Image from "next/image";
 
 // Data de início da carreira
@@ -142,7 +142,7 @@ export default function Home() {
           }`
         }}
       />
-      <TeamplateHome />
+      <TemplateHome />
     </>
   );
 }
