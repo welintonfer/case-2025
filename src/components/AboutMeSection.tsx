@@ -9,6 +9,7 @@ import {
   IconGraph,
 } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
+import CatFollower from "./CatFollower";
 
 export default function AboutMeSection() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -66,8 +67,12 @@ export default function AboutMeSection() {
             </div>
 
             {/* Coluna de Iframe */}
-            <div className="flex-1 hidden lg:flex h-[500px]">
-              <IframeComponent key={key} isDarkMode={isDarkMode} />
+            <div className="flex-1 hidden lg:flex h-[500px] items-center justify-center">
+
+              {/* COLOQUE O GATO AQUI */}
+              <CatFollower className="scale-150" isDarkMode={isDarkMode} />
+
+              {/* <IframeComponent key={key} isDarkMode={isDarkMode} /> */}
             </div>
           </div>
         </div>
